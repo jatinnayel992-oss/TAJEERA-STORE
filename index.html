@@ -1,512 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tajeera Tea | Premium Tea</title>
+<title>Tajeera Tea | Premium Assam Blend</title>
 
-  <meta name="description" content="Tajeera Tea - Premium tea with rich colour, strong taste and refreshing aroma.">
+<meta name="description" content="Tajeera Premium Assam Tea - 250g. Rich colour, strong taste and refreshing aroma. Free Delivery & Cash on Delivery available.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f4ec;
+    color:#17261b;
+}
+
+/* HEADER */
+header{
+    background:#0d291b;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#e1bd65;
+}
+
+/* HERO */
+.hero{
+    min-height:650px;
+    background:linear-gradient(135deg,#0d291b,#214b30);
+    color:white;
+    display:flex;
+    align-items:center;
+    padding:70px 7%;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero small{
+    color:#e1bd65;
+    letter-spacing:4px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.05;
+    margin:18px 0;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.7;
+    color:#e8e8e8;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.btn-primary{
+    background:#e1bd65;
+    color:#10291b;
+}
+
+.btn-secondary{
+    border:1px solid white;
+    color:white;
+}
+
+/* SECTION */
+section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* PRODUCT */
+.products{
+    max-width:900px;
+    margin:auto;
+}
+
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,.10);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.product-image{
+    background:#eee9dd;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+.product-image img{
+    width:100%;
+    max-width:430px;
+    max-height:520px;
+    object-fit:contain;
+}
+
+.product-info{
+    padding:45px 35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.badge{
+    display:inline-block;
+    width:max-content;
+    background:#e8d29b;
+    color:#17301f;
+    padding:7px 13px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.product-info h3{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.product-info p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.price-box{
+    margin:10px 0 20px;
+}
+
+.old-price{
+    color:#888;
+    text-decoration:line-through;
+    font-size:17px;
+    margin-right:10px;
+}
+
+.price{
+    color:#10291b;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.delivery{
+    background:#eef6ee;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:20px;
+    color:#245d32;
+    font-weight:bold;
+}
+
+/* ORDER BUTTON */
+.order-btn{
+    display:block;
+    text-align:center;
+    background:#10291b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.order-btn:hover{
+    background:#1d4930;
+}
+
+/* FEATURES */
+.features{
+    background:white;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.feature{
+    padding:25px;
+}
+
+.feature-icon{
+    font-size:35px;
+}
+
+.feature h3{
+    margin:12px 0 8px;
+}
+
+.feature p{
+    color:#666;
+    line-height:1.5;
+}
+
+/* ORDER FORM */
+.order-section{
+    background:#f0eadc;
+}
+
+.order-box{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.order-box h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.order-box .subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+input, textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    height:100px;
+    resize:none;
+}
+
+.submit-btn{
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:8px;
+    background:#10291b;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ABOUT */
+.about{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about p{
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* CONTACT */
+.contact{
+    background:#10291b;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    background:#08160e;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:2000;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    header{
+        padding:15px 5%;
     }
 
-    body {
-      background: #f7f4ec;
-      color: #1d2b20;
+    .logo{
+        font-size:22px;
     }
 
-    /* HEADER */
-    header {
-      background: #10291b;
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    nav a{
+        margin-left:8px;
+        font-size:12px;
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
+    .hero{
+        min-height:560px;
+        padding:60px 6%;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 15px;
+    .hero h1{
+        font-size:45px;
     }
 
-    nav a:hover {
-      color: #d8b66a;
+    .hero p{
+        font-size:16px;
     }
 
-    /* HERO */
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      padding: 70px 7%;
-      background: linear-gradient(135deg, #10291b, #274b32);
-      color: white;
+    section{
+        padding:60px 6%;
     }
 
-    .hero-content {
-      max-width: 650px;
+    .product-card{
+        grid-template-columns:1fr;
     }
 
-    .hero small {
-      color: #d8b66a;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: bold;
+    .product-image{
+        min-height:400px;
     }
 
-    .hero h1 {
-      font-size: 64px;
-      margin: 18px 0;
-      line-height: 1.05;
+    .product-info{
+        padding:30px 25px;
     }
 
-    .hero p {
-      font-size: 19px;
-      line-height: 1.7;
-      color: #e7e7e7;
-      margin-bottom: 30px;
+    .features{
+        grid-template-columns:1fr 1fr;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
+    .order-box{
+        padding:25px 20px;
     }
-
-    .btn-primary {
-      background: #d8b66a;
-      color: #10291b;
-    }
-
-    .btn-secondary {
-      border: 1px solid white;
-      color: white;
-    }
-
-    /* SECTION */
-    section {
-      padding: 80px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* PRODUCT */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .product-image {
-      height: 280px;
-      background: #e8e2d2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 16px;
-    }
-
-    .product-info {
-      padding: 25px;
-    }
-
-    .product-info h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .product-info p {
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
-
-    .price {
-      font-size: 23px;
-      font-weight: bold;
-      color: #10291b;
-      margin-bottom: 18px;
-    }
-
-    .order-btn {
-      display: block;
-      text-align: center;
-      background: #10291b;
-      color: white;
-      padding: 13px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* FEATURES */
-    .features {
-      background: white;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      text-align: center;
-    }
-
-    .feature {
-      padding: 25px;
-    }
-
-    .feature h3 {
-      margin: 15px 0 8px;
-    }
-
-    .feature p {
-      color: #666;
-      line-height: 1.5;
-    }
-
-    .feature-icon {
-      font-size: 35px;
-    }
-
-    /* ABOUT */
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about p {
-      color: #666;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: #10291b;
-      color: white;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      margin-bottom: 25px;
-      color: #ddd;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #09170f;
-      color: #aaa;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      background: #25D366;
-      color: white;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 27px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-      z-index: 200;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-
-      header {
-        padding: 16px 5%;
-      }
-
-      .logo {
-        font-size: 22px;
-      }
-
-      nav a {
-        margin-left: 10px;
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: 520px;
-        padding: 60px 6%;
-      }
-
-      .hero h1 {
-        font-size: 45px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 60px 6%;
-      }
-
-      .section-title h2 {
-        font-size: 30px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
+<!-- HEADER -->
+<header>
     <div class="logo">TAJEERA</div>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+</header>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+<!-- HERO -->
+<section class="hero" id="home">
+
     <div class="hero-content">
 
-      <small>Premium Tea</small>
+        <small>Premium Assam Blend</small>
 
-      <h1>Every Cup.<br>Perfectly Strong.</h1>
+        <h1>Every Cup.<br>Perfectly Strong.</h1>
 
-      <p>
-        Experience Tajeera Tea — a carefully crafted tea blend
-        made for rich colour, strong taste and a refreshing aroma.
-      </p>
+        <p>
+            Experience Tajeera Tea — a rich and strong Assam blend
+            crafted for colour, taste and refreshing aroma.
+        </p>
 
-      <a href="#shop" class="btn btn-primary">
-        Shop Now
-      </a>
+        <a href="#shop" class="btn btn-primary">
+            Buy Now
+        </a>
 
-      <a href="#contact" class="btn btn-secondary">
-        Contact Us
-      </a>
+        <a href="#contact" class="btn btn-secondary">
+            Contact Us
+        </a>
 
     </div>
-  </section>
+
+</section>
 
 
-  <!-- SHOP -->
-  <section id="shop">
+<!-- SHOP -->
+<section id="shop">
 
     <div class="section-title">
-      <h2>Our Tea</h2>
-      <p>Premium taste for your everyday moments.</p>
+        <h2>Our Premium Tea</h2>
+        <p>Strong taste. Rich colour. Perfect everyday cup.</p>
     </div>
 
     <div class="products">
 
-      <!-- PRODUCT 1 -->
-      <div class="product-card">
+        <div class="product-card">
 
-        <div class="product-image">
-          Product Image
-        </div>
+            <div class="product-image">
 
-        <div class="product-info">
+                <img
+                    src="tajeera-tea-250g.jpg.png"
+                    alt="Tajeera Premium Assam Tea 250g">
 
-          <h3>Tajeera Premium Tea</h3>
+            </div>
 
-          <p>
-            Rich colour, strong taste and refreshing aroma —
-            crafted for the perfect everyday cup.
-          </p>
+            <div class="product-info">
 
-          <div class="price">
-            ₹249
-          </div>
+                <span class="badge">
+                    250g NET WEIGHT
+                </span>
 
-          <a
-            class="order-btn"
-            href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20order%20Tajeera%20Premium%20Tea."
-            target="_blank">
-            Order on WhatsApp
-          </a>
+                <h3>
+                    Tajeera Premium Assam Tea
+                </h3>
 
-        </div>
-      </div>
+                <p>
+                    Rich colour, strong taste and refreshing aroma.
+                    Perfect for tea lovers who enjoy a strong and
+                    satisfying cup every day.
+                </p>
 
+                <div class="price-box">
 
-      <!-- FUTURE PRODUCT -->
-      <div class="product-card">
+                    <span class="old-price">
+                        MRP ₹350
+                    </span>
 
-        <div class="product-image">
-          Coming Soon
-        </div>
+                    <span class="price">
+                        ₹299
+                    </span>
 
-        <div class="product-info">
+                </div>
 
-          <h3>New Product</h3>
+                <div class="delivery">
+                    🚚 FREE DELIVERY &nbsp; | &nbsp; 💵 COD AVAILABLE
+                </div>
 
-          <p>
-            More Tajeera products coming soon.
-          </p>
+                <a href="#order" class="order-btn">
+                    🛒 Order Now
+                </a>
 
-          <div class="price">
-            Coming Soon
-          </div>
-
-          <a
-            class="order-btn"
-            href="https://wa.me/917454086419?text=Hello%20Tajeera,%20I%20want%20to%20know%20about%20your%20new%20products."
-            target="_blank">
-            Enquire Now
-          </a>
+            </div>
 
         </div>
-      </div>
 
     </div>
-  </section>
+
+</section>
 
 
-  <!-- FEATURES -->
-  <section class="features">
+<!-- FEATURES -->
+<section class="features">
 
     <div class="feature">
-      <div class="feature-icon">🍃</div>
-      <h3>Quality Tea</h3>
-      <p>Carefully selected tea blend for a consistent experience.</p>
+        <div class="feature-icon">🍃</div>
+        <h3>Premium Blend</h3>
+        <p>Carefully selected tea blend.</p>
     </div>
 
     <div class="feature">
-      <div class="feature-icon">☕</div>
-      <h3>Rich Taste</h3>
-      <p>Made for those who love a strong and satisfying cup.</p>
+        <div class="feature-icon">☕</div>
+        <h3>Strong Taste</h3>
+        <p>Made for a strong satisfying cup.</p>
     </div>
 
     <div class="feature">
-      <div class="feature-icon">✨</div>
-      <h3>Premium Experience</h3>
-      <p>A premium tea experience for your everyday moments.</p>
+        <div class="feature-icon">🚚</div>
+        <h3>Free Delivery</h3>
+        <p>Delivery charges are on us.</p>
     </div>
 
     <div class="feature">
-      <div class="feature-icon">📦</div>
-      <h3>Easy Ordering</h3>
-      <p>Order directly with us through WhatsApp.</p>
+        <div class="feature-icon">💵</div>
+        <h3>COD Available</h3>
+        <p>Pay when your order arrives.</p>
     </div>
 
-  </section>
+</section>
 
 
-  <!-- ABOUT -->
-  <section id="about">
+<!-- ORDER FORM -->
+<section class="order-section" id="order">
+
+    <div class="order-box">
+
+        <h2>Place Your Order</h2>
+
+        <p class="subtitle">
+            Tajeera Premium Assam Tea — 250g | ₹299
+        </p>
+
+        <form onsubmit="sendOrder(); return false;">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Full Name"
+                required>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Mobile Number"
+                required>
+
+            <textarea
+                id="address"
+                placeholder="Complete Delivery Address"
+                required></textarea>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="City / Town"
+                required>
+
+            <input
+                type="text"
+                id="pincode"
+                placeholder="PIN Code"
+                required>
+
+            <button type="submit" class="submit-btn">
+                PLACE ORDER — ₹299 | COD
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
 
     <div class="about">
 
-      <div class="section-title">
-        <h2>About Tajeera</h2>
-      </div>
+        <div class="section-title">
+            <h2>About Tajeera</h2>
+        </div>
 
-      <p>
-        Tajeera is built around one simple idea —
-        great tea should deliver rich colour, strong taste
-        and a satisfying aroma in every cup.
-      </p>
+        <p>
+            Tajeera is built around one simple idea —
+            great tea should deliver rich colour, strong taste
+            and a satisfying aroma in every cup.
+        </p>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+<!-- CONTACT -->
+<section class="contact" id="contact">
 
     <h2>Let's Connect</h2>
 
     <p>
-      Have a question or want to place an order?
-      Contact Tajeera Tea on WhatsApp.
+        Have a question or want to place an order?
+        Contact Tajeera Tea on WhatsApp.
     </p>
 
     <a
-      class="btn btn-primary"
-      href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20know%20more."
-      target="_blank">
-      WhatsApp Us
+        class="btn btn-primary"
+        href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20know%20more."
+        target="_blank">
+        WhatsApp Us
     </a>
 
-  </section>
+</section>
 
 
-  <!-- FOOTER -->
-  <footer>
+<!-- FOOTER -->
+<footer>
     © 2026 Tajeera Tea. All Rights Reserved.
-  </footer>
+</footer>
 
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
     class="whatsapp"
     href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20place%20an%20order."
     target="_blank"
     aria-label="WhatsApp">
     ☎
-  </a>
+</a>
+
+
+<script>
+
+function sendOrder(){
+
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var pincode = document.getElementById("pincode").value;
+
+    var message =
+        "Hello Tajeera Tea,%0A%0A" +
+        "I want to place an order.%0A%0A" +
+        "Product: Tajeera Premium Assam Tea%0A" +
+        "Weight: 250g%0A" +
+        "Price: ₹299%0A" +
+        "Payment: Cash on Delivery%0A%0A" +
+        "Customer Name: " + encodeURIComponent(name) + "%0A" +
+        "Mobile: " + encodeURIComponent(phone) + "%0A" +
+        "Address: " + encodeURIComponent(address) + "%0A" +
+        "City: " + encodeURIComponent(city) + "%0A" +
+        "PIN Code: " + encodeURIComponent(pincode);
+
+    window.open(
+        "https://wa.me/917454086419?text=" + message,
+        "_blank"
+    );
+}
+
+</script>
 
 </body>
 </html>
