@@ -511,7 +511,20 @@ footer{
                     </span>
 
                 </div>
+<div class="quantity-box">
+    <label for="quantity">Quantity:</label>
+    <select id="quantity" onchange="updateTotal()">
+        <option value="1">1 Pack</option>
+        <option value="2">2 Packs</option>
+        <option value="3">3 Packs</option>
+        <option value="4">4 Packs</option>
+        <option value="5">5 Packs</option>
+    </select>
+</div>
 
+<div class="total-price">
+    Total: ₹<span id="totalPrice">299</span>
+</div>
                 <div class="delivery">
                     🚚 FREE DELIVERY &nbsp; | &nbsp; 💵 COD AVAILABLE
                 </div>
