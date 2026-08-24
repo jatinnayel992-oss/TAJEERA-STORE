@@ -744,7 +744,13 @@ footer{
 
 
 <script>
+function updateTotal(){
+    var quantity = document.getElementById("quantity").value;
+    var price = 299;
+    var total = price * quantity;
 
+    document.getElementById("totalPrice").textContent = total;
+}
 function sendOrder(){
 
     var name = document.getElementById("name").value;
