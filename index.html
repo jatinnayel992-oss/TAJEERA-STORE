@@ -588,7 +588,7 @@ footer{
 </div>
 
 <div class="total-price">
-    Total: ₹<span id="totalPrice">299</span>
+    Total: ₹<span id="totalPrice">190</span>
 </div>
                 <div class="delivery">
                     🚚 FREE DELIVERY &nbsp; | &nbsp; 💵 COD AVAILABLE
@@ -645,7 +645,7 @@ footer{
         <h2>Place Your Order</h2>
 
         <p class="subtitle">
-            Tajeera Premium Assam Tea — 250g | ₹299
+            Tajeera Premium Assam Tea — 250g | ₹190
         </p>
 
         <form onsubmit="sendOrder(); return false;">
@@ -680,7 +680,7 @@ footer{
                 required>
 
             <button type="submit" class="submit-btn">
-                PLACE ORDER — ₹299 | COD
+                PLACE ORDER — ₹190 | COD
             </button>
 
         </form>
@@ -749,7 +749,7 @@ footer{
 <script>
 function updateTotal(){
     var quantity = document.getElementById("quantity").value;
-    var price = 299;
+    var price = 190;
     var total = price * quantity;
 
     document.getElementById("totalPrice").textContent = total;
@@ -769,7 +769,7 @@ function sendOrder(){
         quantity = parseInt(quantityBox.value) || 1;
     }
 
-    var price = 299;
+    var price = 190;
     var total = price * quantity;
 
     var message =
@@ -778,7 +778,7 @@ function sendOrder(){
         "Product: Tajeera Premium Assam Tea%0A" +
         "Weight: 250g per pack%0A" +
         "Quantity: " + quantity + " Pack(s)%0A" +
-        "Price: ₹299 per pack%0A" +
+        "Price: ₹190 per pack%0A" +
         "Total Amount: ₹" + total + "%0A" +
         "Payment: Cash on Delivery%0A%0A" +
         "Customer Name: " + encodeURIComponent(name) + "%0A" +
