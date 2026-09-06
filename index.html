@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tajeera | Premium Assam Tea</title>
@@ -14,2373 +11,2547 @@ content="Tajeera Premium Assam Tea — rich colour, strong taste and refreshing 
 
 <style>
 
-/* =========================
-   ROOT
-========================= */
-
 :root{
-    --green:#173b2b;
-    --green-dark:#0d261c;
-    --green-light:#315b45;
-    --ivory:#f7f3e9;
-    --cream:#eee7d7;
-    --copper:#b98252;
-    --copper-light:#d3a477;
-    --text:#243229;
-    --muted:#70776f;
-    --white:#ffffff;
+  --green:#173b2b;
+  --green-dark:#0d261c;
+  --green-light:#315b45;
+  --ivory:#f7f3e9;
+  --cream:#eee7d7;
+  --copper:#b98252;
+  --copper-light:#d3a477;
+  --text:#243229;
+  --muted:#70776f;
+  --white:#ffffff;
+  --line:#ded8ca;
 }
 
-
-/* =========================
-   RESET
-========================= */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    color:var(--text);
-
-    background:var(--ivory);
-
-    line-height:1.6;
-
-    overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--text);
+  background:var(--ivory);
+  line-height:1.6;
+  overflow-x:hidden;
 }
 
 button,
 input,
 textarea,
 select{
-    font-family:inherit;
+  font:inherit;
 }
 
+button{
+  cursor:pointer;
+}
 
-/* =========================
-   HEADER
-========================= */
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* HEADER */
 
 header{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    height:78px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:0 7%;
-
-    background:rgba(247,243,233,.96);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(185,130,82,.20);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  background:rgba(247,243,233,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(185,130,82,.20);
 }
 
 .logo{
-
-    color:var(--green);
-
-    font-size:29px;
-
-    font-weight:bold;
-
-    letter-spacing:4px;
+  color:var(--green);
+  font-size:29px;
+  font-weight:bold;
+  letter-spacing:4px;
 }
 
 .logo::after{
-
-    content:"TEA";
-
-    display:block;
-
-    font-family:Arial,sans-serif;
-
-    font-size:8px;
-
-    letter-spacing:5px;
-
-    text-align:center;
-
-    color:var(--copper);
-
-    margin-top:-6px;
+  content:"TEA";
+  display:block;
+  font-family:Arial,sans-serif;
+  font-size:8px;
+  letter-spacing:5px;
+  text-align:center;
+  color:var(--copper);
+  margin-top:-6px;
 }
 
 nav{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:32px;
+  display:flex;
+  align-items:center;
+  gap:30px;
 }
 
 nav a{
-
-    color:var(--green);
-
-    font-family:Arial,sans-serif;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    transition:.3s;
+  color:var(--green);
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
 nav a:hover{
-
-    color:var(--copper);
+  color:var(--copper);
 }
 
+.cart-btn{
+  border:1px solid var(--green);
+  background:var(--green);
+  color:white;
+  padding:11px 15px;
+  border-radius:3px;
+  font:700 12px Arial,sans-serif;
+  letter-spacing:.7px;
+}
 
-/* =========================
-   HERO
-========================= */
+.cart-count{
+  display:inline-flex;
+  min-width:20px;
+  height:20px;
+  align-items:center;
+  justify-content:center;
+  background:var(--copper);
+  border-radius:50%;
+  margin-left:6px;
+}
+
+/* HERO */
 
 .hero{
-
-    min-height:680px;
-
-    display:grid;
-
-    grid-template-columns:1.05fr .95fr;
-
-    align-items:center;
-
-    gap:50px;
-
-    padding:80px 7%;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:var(--green);
+  min-height:680px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:50px;
+  padding:80px 7%;
+  position:relative;
+  overflow:hidden;
+  background:var(--green);
 }
 
 .hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:600px;
-
-    height:600px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(211,164,119,.25);
-
-    right:-220px;
-
-    top:-170px;
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:350px;
-
-    height:350px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(211,164,119,.16);
-
-    right:50px;
-
-    bottom:-210px;
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  border:1px solid rgba(211,164,119,.25);
+  right:-220px;
+  top:-170px;
 }
 
 .hero-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
+}
 
-    position:relative;
-
-    z-index:2;
-
-    max-width:650px;
+.eyebrow,
+.section-label{
+  color:var(--copper-light);
+  font:700 11px Arial,sans-serif;
+  letter-spacing:4px;
+  text-transform:uppercase;
 }
 
 .eyebrow{
-
-    color:var(--copper-light);
-
-    font-family:Arial,sans-serif;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:20px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-
-    color:var(--ivory);
-
-    font-size:76px;
-
-    line-height:1.02;
-
-    font-weight:normal;
-
-    letter-spacing:-2px;
-
-    margin-bottom:25px;
+  color:var(--ivory);
+  font-size:76px;
+  line-height:1.02;
+  font-weight:normal;
+  letter-spacing:-2px;
+  margin-bottom:25px;
 }
 
 .hero h1 span{
-
-    color:var(--copper-light);
-
-    font-style:italic;
+  color:var(--copper-light);
+  font-style:italic;
 }
 
 .hero-description{
-
-    color:#d8ddd8;
-
-    font-family:Arial,sans-serif;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    max-width:570px;
-
-    margin-bottom:35px;
+  color:#d8ddd8;
+  font:17px/1.8 Arial,sans-serif;
+  max-width:570px;
+  margin-bottom:35px;
 }
 
 .hero-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:13px;
-
-    flex-wrap:wrap;
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
 }
 
 .btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:52px;
-
-    padding:0 28px;
-
-    border-radius:3px;
-
-    font-family:Arial,sans-serif;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    transition:.3s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 28px;
+  border-radius:3px;
+  font:700 13px Arial,sans-serif;
+  letter-spacing:1px;
 }
 
 .btn-primary{
-
-    background:var(--copper);
-
-    color:white;
+  background:var(--copper);
+  color:white;
 }
 
 .btn-primary:hover{
-
-    background:var(--copper-light);
-
-    transform:translateY(-2px);
+  background:var(--copper-light);
 }
 
 .btn-outline{
-
-    border:1px solid rgba(247,243,233,.5);
-
-    color:var(--ivory);
+  border:1px solid rgba(247,243,233,.5);
+  color:var(--ivory);
 }
 
 .btn-outline:hover{
-
-    background:var(--ivory);
-
-    color:var(--green);
+  background:var(--ivory);
+  color:var(--green);
 }
 
-
-/* =========================
-   HERO PRODUCT VISUAL
-========================= */
+/* HERO PRODUCT */
 
 .hero-product{
-
-    position:relative;
-
-    z-index:2;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:520px;
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:520px;
 }
 
 .hero-product::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:430px;
-
-    height:430px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(211,164,119,.18),
-            rgba(211,164,119,0) 70%
-        );
+  content:"";
+  position:absolute;
+  width:430px;
+  height:430px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(211,164,119,.18),
+      rgba(211,164,119,0) 70%
+    );
 }
 
 .hero-product img{
-
-    position:relative;
-
-    z-index:2;
-
-    width:auto;
-
-    max-width:90%;
-
-    max-height:520px;
-
-    object-fit:contain;
-
-    filter:
-        drop-shadow(0 30px 25px rgba(0,0,0,.35));
+  position:relative;
+  z-index:2;
+  max-width:90%;
+  max-height:520px;
+  object-fit:contain;
+  filter:drop-shadow(0 30px 25px rgba(0,0,0,.35));
 }
 
 .hero-stamp{
-
-    position:absolute;
-
-    z-index:3;
-
-    right:4%;
-
-    bottom:45px;
-
-    width:115px;
-
-    height:115px;
-
-    border:1px solid var(--copper-light);
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    color:var(--copper-light);
-
-    font-family:Arial,sans-serif;
-
-    font-size:10px;
-
-    letter-spacing:2px;
-
-    line-height:1.5;
+  position:absolute;
+  z-index:3;
+  right:4%;
+  bottom:45px;
+  width:115px;
+  height:115px;
+  border:1px solid var(--copper-light);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--copper-light);
+  font:10px/1.5 Arial,sans-serif;
+  letter-spacing:2px;
 }
 
-
-/* =========================
-   INTRO STRIP
-========================= */
+/* INTRO */
 
 .intro-strip{
-
-    background:var(--cream);
-
-    padding:25px 7%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:45px;
-
-    flex-wrap:wrap;
-
-    border-bottom:1px solid rgba(185,130,82,.15);
+  background:var(--cream);
+  padding:25px 7%;
+  display:flex;
+  justify-content:center;
+  gap:45px;
+  flex-wrap:wrap;
+  border-bottom:1px solid rgba(185,130,82,.15);
 }
 
 .intro-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    color:var(--green);
-
-    font-family:Arial,sans-serif;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
+  display:flex;
+  gap:10px;
+  color:var(--green);
+  font:700 12px Arial,sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
 }
 
 .intro-item span{
-
-    color:var(--copper);
-
-    font-size:18px;
+  color:var(--copper);
+  font-size:18px;
 }
 
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* GENERAL */
 
 section{
-
-    padding:95px 7%;
+  padding:90px 7%;
 }
 
 .section-heading{
-
-    text-align:center;
-
-    max-width:700px;
-
-    margin:0 auto 55px;
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 50px;
 }
 
 .section-label{
-
-    display:block;
-
-    color:var(--copper);
-
-    font-family:Arial,sans-serif;
-
-    font-size:11px;
-
-    font-weight:bold;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:12px;
+  display:block;
+  color:var(--copper);
+  margin-bottom:12px;
 }
 
 .section-heading h2{
-
-    color:var(--green);
-
-    font-size:48px;
-
-    line-height:1.15;
-
-    font-weight:normal;
-
-    margin-bottom:15px;
+  color:var(--green);
+  font-size:48px;
+  line-height:1.15;
+  font-weight:normal;
+  margin-bottom:15px;
 }
 
 .section-heading p{
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:15px;
-
-    line-height:1.8;
+  color:var(--muted);
+  font:15px/1.8 Arial,sans-serif;
 }
 
-
-/* =========================
-   SHOP
-========================= */
-
-.shop-section{
-
-    background:var(--ivory);
-}
+/* SHOP */
 
 .product-card{
-
-    max-width:1080px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    background:white;
-
-    box-shadow:
-        0 25px 70px rgba(24,46,34,.12);
-
-    border:1px solid rgba(185,130,82,.15);
-
-    overflow:hidden;
+  max-width:1080px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:white;
+  box-shadow:0 25px 70px rgba(24,46,34,.12);
+  border:1px solid rgba(185,130,82,.15);
+  overflow:hidden;
 }
 
 .product-image{
-
-    min-height:560px;
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            #eee4d1 0%,
-            #e1d5bd 55%,
-            #d6c7ab 100%
-        );
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:35px;
-
-    position:relative;
-}
-
-.product-image::before{
-
-    content:"TAJEERA";
-
-    position:absolute;
-
-    top:25px;
-
-    left:28px;
-
-    color:rgba(23,59,43,.15);
-
-    font-size:12px;
-
-    font-family:Arial,sans-serif;
-
-    letter-spacing:4px;
-
-    font-weight:bold;
+  min-height:560px;
+  background:
+    radial-gradient(
+      circle at center,
+      #eee4d1 0%,
+      #e1d5bd 55%,
+      #d6c7ab 100%
+    );
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px;
+  position:relative;
 }
 
 .product-image img{
-
-    width:100%;
-
-    max-width:440px;
-
-    max-height:530px;
-
-    object-fit:contain;
-
-    filter:
-        drop-shadow(0 25px 22px rgba(0,0,0,.20));
-
-    transition:.5s;
-}
-
-.product-card:hover .product-image img{
-
-    transform:translateY(-6px) scale(1.02);
+  width:100%;
+  max-width:440px;
+  max-height:530px;
+  object-fit:contain;
+  filter:drop-shadow(0 25px 22px rgba(0,0,0,.20));
 }
 
 .product-info{
-
-    padding:55px 48px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
+  padding:55px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .product-number{
-
-    font-family:Arial,sans-serif;
-
-    color:var(--copper);
-
-    font-size:10px;
-
-    font-weight:bold;
-
-    letter-spacing:3px;
-
-    margin-bottom:18px;
+  font:700 10px Arial,sans-serif;
+  color:var(--copper);
+  letter-spacing:3px;
+  margin-bottom:18px;
 }
 
 .product-info h3{
-
-    color:var(--green);
-
-    font-size:38px;
-
-    line-height:1.15;
-
-    font-weight:normal;
-
-    margin-bottom:18px;
+  color:var(--green);
+  font-size:38px;
+  line-height:1.15;
+  font-weight:normal;
+  margin-bottom:18px;
 }
 
 .product-description{
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:15px;
-
-    line-height:1.8;
-
-    margin-bottom:25px;
+  color:var(--muted);
+  font:15px/1.8 Arial,sans-serif;
+  margin-bottom:25px;
 }
 
 .product-divider{
-
-    width:55px;
-
-    height:2px;
-
-    background:var(--copper);
-
-    margin-bottom:25px;
+  width:55px;
+  height:2px;
+  background:var(--copper);
+  margin-bottom:25px;
 }
 
-
-/* =========================
-   PRICE
-========================= */
+/* PRICE */
 
 .price-row{
-
-    display:flex;
-
-    align-items:end;
-
-    gap:13px;
-
-    margin-bottom:23px;
+  display:flex;
+  align-items:end;
+  gap:13px;
+  margin-bottom:23px;
 }
 
 .old-price{
-
-    color:#999;
-
-    font-family:Arial,sans-serif;
-
-    font-size:14px;
-
-    text-decoration:line-through;
+  color:#999;
+  font:14px Arial,sans-serif;
+  text-decoration:line-through;
 }
 
 .price{
-
-    color:var(--green);
-
-    font-family:Arial,sans-serif;
-
-    font-size:34px;
-
-    font-weight:bold;
+  color:var(--green);
+  font:bold 34px Arial,sans-serif;
 }
 
 .price-note{
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:11px;
-
-    margin-bottom:3px;
+  color:var(--muted);
+  font:11px Arial,sans-serif;
+  margin-bottom:3px;
 }
 
+/* QUANTITY */
 
-/* =========================
-   QUANTITY
-========================= */
-
-.quantity-box{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    border:1px solid #ddd6c9;
-
-    padding:12px 15px;
-
-    margin-bottom:15px;
-
-    font-family:Arial,sans-serif;
+.qty-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px;
 }
 
-.quantity-box label{
-
-    color:var(--green);
-
-    font-size:13px;
-
-    font-weight:bold;
+.qty-control{
+  display:flex;
+  border:1px solid #ddd6c9;
+  height:46px;
 }
 
-.quantity-box select{
-
-    border:0;
-
-    outline:0;
-
-    background:transparent;
-
-    color:var(--green);
-
-    font-size:14px;
-
-    font-weight:bold;
-
-    cursor:pointer;
+.qty-control button{
+  width:42px;
+  border:0;
+  background:white;
+  color:var(--green);
+  font-size:20px;
 }
 
-.total-price{
-
-    color:var(--green);
-
-    font-family:Arial,sans-serif;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    margin-bottom:18px;
+.qty-control input{
+  width:50px;
+  text-align:center;
+  border:0;
+  outline:0;
+  background:white;
+  font:700 14px Arial,sans-serif;
 }
-
-
-/* =========================
-   DELIVERY
-========================= */
 
 .delivery{
-
-    padding:13px 15px;
-
-    background:#f4f7f2;
-
-    border-left:3px solid var(--copper);
-
-    color:var(--green);
-
-    font-family:Arial,sans-serif;
-
-    font-size:11px;
-
-    font-weight:bold;
-
-    letter-spacing:.5px;
-
-    margin-bottom:20px;
+  padding:13px 15px;
+  background:#f4f7f2;
+  border-left:3px solid var(--copper);
+  color:var(--green);
+  font:700 11px Arial,sans-serif;
+  letter-spacing:.5px;
+  margin-bottom:18px;
 }
 
-.order-btn{
-
-    width:100%;
-
-    min-height:54px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--green);
-
-    color:white;
-
-    font-family:Arial,sans-serif;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    transition:.3s;
+.action-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
-.order-btn:hover{
-
-    background:var(--copper);
-
-    transform:translateY(-2px);
+.action-btn{
+  min-height:54px;
+  border:0;
+  background:var(--green);
+  color:white;
+  font:700 12px Arial,sans-serif;
+  letter-spacing:1px;
 }
 
+.action-btn.alt{
+  background:var(--copper);
+}
 
-/* =========================
-   FEATURES
-========================= */
+.action-btn:hover{
+  transform:translateY(-2px);
+}
+   /* FEATURES */
 
 .features-section{
-
-    background:white;
-
-    padding-top:75px;
-
-    padding-bottom:75px;
+  background:white;
+  padding-top:70px;
+  padding-bottom:70px;
 }
 
 .features{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    border-top:1px solid #ded8ca;
-
-    border-bottom:1px solid #ded8ca;
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
 .feature{
-
-    text-align:center;
-
-    padding:32px 20px;
-
-    border-right:1px solid #ded8ca;
+  text-align:center;
+  padding:32px 20px;
+  border-right:1px solid var(--line);
 }
 
 .feature:last-child{
-
-    border-right:0;
+  border-right:0;
 }
 
 .feature-icon{
-
-    font-size:27px;
-
-    margin-bottom:12px;
+  font-size:27px;
+  margin-bottom:12px;
 }
 
 .feature h3{
-
-    color:var(--green);
-
-    font-size:17px;
-
-    font-weight:normal;
-
-    margin-bottom:7px;
+  color:var(--green);
+  font-size:17px;
+  font-weight:normal;
+  margin-bottom:7px;
 }
 
 .feature p{
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:12px;
-
-    line-height:1.6;
+  color:var(--muted);
+  font:12px/1.6 Arial,sans-serif;
 }
 
 
-/* =========================
-   BRAND STORY
-========================= */
+/* ABOUT */
 
 .about-section{
-
-    background:var(--green);
-
-    color:white;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.about-section::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-
-    height:500px;
-
-    border:1px solid rgba(211,164,119,.18);
-
-    border-radius:50%;
-
-    right:-220px;
-
-    top:-160px;
+  background:var(--green);
+  color:white;
+  position:relative;
+  overflow:hidden;
 }
 
 .about{
-
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:2;
-}
-
-.about .section-label{
-
-    color:var(--copper-light);
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  position:relative;
+  z-index:2;
 }
 
 .about h2{
-
-    color:var(--ivory);
-
-    font-size:50px;
-
-    font-weight:normal;
-
-    line-height:1.15;
-
-    margin-bottom:25px;
+  color:var(--ivory);
+  font-size:50px;
+  font-weight:normal;
+  line-height:1.15;
+  margin-bottom:25px;
 }
 
 .about p{
-
-    color:#d7ddd8;
-
-    font-family:Arial,sans-serif;
-
-    font-size:16px;
-
-    line-height:1.9;
+  color:#d7ddd8;
+  font:16px/1.9 Arial,sans-serif;
 }
 
 .about-signature{
-
-    color:var(--copper-light);
-
-    font-style:italic;
-
-    font-size:23px;
-
-    margin-top:25px;
+  color:var(--copper-light);
+  font-style:italic;
+  font-size:23px;
+  margin-top:25px;
 }
 
 
-/* =========================
-   ORDER SECTION
-========================= */
-
-.order-section{
-
-    background:var(--cream);
-}
-
-.order-box{
-
-    max-width:650px;
-
-    margin:auto;
-
-    background:white;
-
-    padding:48px;
-
-    box-shadow:
-        0 20px 60px rgba(23,59,43,.10);
-
-    border-top:3px solid var(--copper);
-}
-
-.order-box h2{
-
-    color:var(--green);
-
-    text-align:center;
-
-    font-size:38px;
-
-    font-weight:normal;
-
-    margin-bottom:10px;
-}
-
-.subtitle{
-
-    text-align:center;
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:13px;
-
-    margin-bottom:30px;
-}
-
-.form-label{
-
-    display:block;
-
-    color:var(--green);
-
-    font-family:Arial,sans-serif;
-
-    font-size:11px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-    margin-bottom:7px;
-}
-
-input,
-textarea{
-
-    width:100%;
-
-    padding:14px 15px;
-
-    margin-bottom:18px;
-
-    border:1px solid #ddd6c9;
-
-    background:#fffdf8;
-
-    color:var(--text);
-
-    outline:none;
-
-    border-radius:0;
-
-    font-family:Arial,sans-serif;
-
-    font-size:14px;
-
-    transition:.3s;
-}
-
-input:focus,
-textarea:focus{
-
-    border-color:var(--copper);
-
-    box-shadow:0 0 0 2px rgba(185,130,82,.10);
-}
-
-textarea{
-
-    min-height:115px;
-
-    resize:vertical;
-}
-
-.submit-btn{
-
-    width:100%;
-
-    min-height:56px;
-
-    border:0;
-
-    background:var(--green);
-
-    color:white;
-
-    cursor:pointer;
-
-    font-family:Arial,sans-serif;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:1.5px;
-
-    transition:.3s;
-}
-
-.submit-btn:hover{
-
-    background:var(--copper);
-
-    transform:translateY(-2px);
-}
-
-.cod-note{
-
-    text-align:center;
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:11px;
-
-    margin-top:14px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-
-    background:var(--ivory);
-
-    text-align:center;
-
-    border-top:1px solid rgba(185,130,82,.18);
-}
-
-.contact h2{
-
-    color:var(--green);
-
-    font-size:43px;
-
-    font-weight:normal;
-
-    margin-bottom:12px;
-}
-
-.contact p{
-
-    max-width:550px;
-
-    margin:0 auto 25px;
-
-    color:var(--muted);
-
-    font-family:Arial,sans-serif;
-
-    font-size:14px;
-}
-
-.contact .btn-primary{
-
-    color:white;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-
-    background:var(--green-dark);
-
-    color:#cfd8d1;
-
-    text-align:center;
-
-    padding:32px 20px;
-
-    font-family:Arial,sans-serif;
-
-    font-size:11px;
-
-    letter-spacing:1px;
+  background:var(--green-dark);
+  color:#cfd8d1;
+  text-align:center;
+  padding:35px 20px;
+  font:11px Arial,sans-serif;
+  letter-spacing:1px;
 }
 
 .footer-brand{
-
-    color:var(--copper-light);
-
-    font-family:Georgia,serif;
-
-    font-size:20px;
-
-    letter-spacing:3px;
-
-    margin-bottom:8px;
+  color:var(--copper-light);
+  font:20px Georgia,serif;
+  letter-spacing:3px;
+  margin-bottom:8px;
 }
 
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
-
-    position:fixed;
-
-    right:22px;
-
-    bottom:22px;
-
-    width:58px;
-
-    height:58px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#25D366;
-
-    color:white;
-
-    font-family:Arial,sans-serif;
-
-    font-size:25px;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.22);
-
-    z-index:2000;
-
-    transition:.3s;
-}
-
-.whatsapp:hover{
-
-    transform:scale(1.08);
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:58px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  font:25px Arial,sans-serif;
+  box-shadow:0 8px 25px rgba(0,0,0,.22);
+  z-index:2000;
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* CART BACKDROP */
+
+.drawer-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.48);
+  z-index:3000;
+  display:none;
+}
+
+.drawer-backdrop.open{
+  display:block;
+}
+
+
+/* CART DRAWER */
+
+.cart-drawer{
+  position:absolute;
+  right:0;
+  top:0;
+  height:100%;
+  width:min(430px,94vw);
+  background:var(--ivory);
+  padding:25px;
+  overflow:auto;
+}
+
+.drawer-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  padding-bottom:18px;
+  margin-bottom:20px;
+}
+
+.drawer-head h2{
+  font-size:28px;
+  font-weight:normal;
+  color:var(--green);
+}
+
+.close{
+  border:0;
+  background:transparent;
+  font-size:28px;
+  color:var(--green);
+  cursor:pointer;
+}
+
+
+/* CART ITEM */
+
+.cart-item{
+  display:grid;
+  grid-template-columns:70px 1fr auto;
+  gap:12px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+  align-items:center;
+}
+
+.cart-item img{
+  width:70px;
+  height:80px;
+  object-fit:contain;
+  background:#eee4d1;
+}
+
+.cart-item h4{
+  font-size:16px;
+  font-weight:normal;
+  color:var(--green);
+}
+
+.cart-item small{
+  font:12px Arial,sans-serif;
+  color:var(--muted);
+}
+
+.remove{
+  border:0;
+  background:none;
+  color:#a04c3c;
+  font:11px Arial,sans-serif;
+  cursor:pointer;
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  margin:25px 0;
+  font:bold 17px Arial,sans-serif;
+  color:var(--green);
+}
+
+.full-btn{
+  width:100%;
+  min-height:54px;
+  border:0;
+  background:var(--green);
+  color:white;
+  font:bold 12px Arial,sans-serif;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:50px 10px;
+  font:14px Arial,sans-serif;
+}
+
+
+/* CHECKOUT MODAL */
+
+.checkout-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.58);
+  z-index:4000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.checkout-modal.open{
+  display:flex;
+}
+
+.checkout{
+  width:min(760px,100%);
+  max-height:94vh;
+  overflow:auto;
+  background:var(--ivory);
+  padding:32px;
+}
+
+.checkout h2{
+  color:var(--green);
+  font-size:34px;
+  font-weight:normal;
+  margin-bottom:5px;
+}
+
+.checkout-sub{
+  color:var(--muted);
+  font:13px Arial,sans-serif;
+  margin-bottom:22px;
+}
+
+.checkout-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  margin-bottom:12px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  display:block;
+  color:var(--green);
+  font:bold 10px Arial,sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd6c9;
+  background:#fffdf8;
+  outline:0;
+  font:14px Arial,sans-serif;
+}
+
+.field textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+
+/* PAYMENT */
+
+.payment-box{
+  border:1px solid var(--line);
+  padding:16px;
+  margin:8px 0 18px;
+  background:white;
+}
+
+.payment-box h3{
+  font:700 12px Arial,sans-serif;
+  color:var(--green);
+  margin-bottom:10px;
+}
+
+.pay-option{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:10px 0;
+  font:14px Arial,sans-serif;
+}
+
+.pay-option input{
+  accent-color:var(--green);
+}
+
+
+/* CHECKOUT BUTTONS */
+
+.checkout-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.cancel{
+  border:1px solid var(--green);
+  background:transparent;
+  color:var(--green);
+  font:bold 12px Arial,sans-serif;
+  min-height:54px;
+  cursor:pointer;
+}
+
+.pay-now{
+  border:0;
+  background:var(--copper);
+  color:white;
+  font:bold 12px Arial,sans-serif;
+  letter-spacing:1px;
+  min-height:54px;
+  cursor:pointer;
+}
+
+.secure-note{
+  font:11px Arial,sans-serif;
+  color:var(--muted);
+  text-align:center;
+  margin-top:12px;
+}
+
+
+/* NOTIFICATION */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:28px;
+  transform:translate(-50%,20px);
+  opacity:0;
+  z-index:5000;
+  background:var(--green-dark);
+  color:white;
+  padding:13px 18px;
+  border-radius:3px;
+  font:13px Arial,sans-serif;
+  transition:.3s;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+
+/* TABLET */
 
 @media(max-width:900px){
 
-    .hero{
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding-top:70px;
+  }
 
-        grid-template-columns:1fr;
+  .hero-content{
+    margin:auto;
+  }
 
-        text-align:center;
+  .hero-description{
+    margin-left:auto;
+    margin-right:auto;
+  }
 
-        padding-top:70px;
-    }
+  .hero-buttons{
+    justify-content:center;
+  }
 
-    .hero-content{
+  .hero-product{
+    min-height:420px;
+  }
 
-        max-width:700px;
+  .product-card{
+    grid-template-columns:1fr;
+  }
 
-        margin:auto;
-    }
+  .features{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .hero-description{
+  .feature:nth-child(2){
+    border-right:0;
+  }
 
-        margin-left:auto;
+  .feature:nth-child(-n+2){
+    border-bottom:1px solid var(--line);
+  }
 
-        margin-right:auto;
-    }
-
-    .hero-buttons{
-
-        justify-content:center;
-    }
-
-    .hero-product{
-
-        min-height:420px;
-    }
-
-    .hero-product img{
-
-        max-height:400px;
-    }
-
-    .product-card{
-
-        grid-template-columns:1fr;
-    }
-
-    .product-image{
-
-        min-height:480px;
-    }
-
-    .features{
-
-        grid-template-columns:1fr 1fr;
-    }
-
-    .feature:nth-child(2){
-
-        border-right:0;
-    }
-
-    .feature:nth-child(-n+2){
-
-        border-bottom:1px solid #ded8ca;
-    }
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
-    header{
-
-        height:auto;
-
-        min-height:70px;
-
-        padding:14px 5%;
-
-        flex-direction:column;
-
-        gap:10px;
-    }
-
-    .logo{
-
-        font-size:25px;
-    }
-
-    nav{
-
-        gap:17px;
-    }
-
-    nav a{
-
-        font-size:11px;
-
-        letter-spacing:.5px;
-    }
-
-
-    .hero{
-
-        min-height:auto;
-
-        padding:65px 6% 30px;
-    }
-
-    .hero h1{
-
-        font-size:49px;
-
-        letter-spacing:-1px;
-    }
-
-    .hero-description{
-
-        font-size:14px;
-    }
-
-    .hero-product{
-
-        min-height:390px;
-    }
-
-    .hero-product img{
-
-        max-width:88%;
-
-        max-height:380px;
-    }
-
-    .hero-stamp{
-
-        width:90px;
-
-        height:90px;
-
-        right:0;
-
-        bottom:20px;
-
-        font-size:8px;
-    }
-
-
-    .intro-strip{
-
-        gap:18px;
-
-        padding:20px 5%;
-    }
-
-    .intro-item{
-
-        font-size:9px;
-    }
-
-
-    section{
-
-        padding:65px 5%;
-    }
-
-    .section-heading{
-
-        margin-bottom:35px;
-    }
-
-    .section-heading h2{
-
-        font-size:37px;
-    }
-
-
-    .product-image{
-
-        min-height:390px;
-
-        padding:20px;
-    }
-
-    .product-image img{
-
-        max-width:340px;
-
-        max-height:420px;
-    }
-
-    .product-info{
-
-        padding:35px 25px;
-    }
-
-    .product-info h3{
-
-        font-size:31px;
-    }
-
-    .price{
-
-        font-size:30px;
-    }
-
-
-    .features{
-
-        grid-template-columns:1fr 1fr;
-    }
-
-    .feature{
-
-        padding:25px 10px;
-    }
-
-    .feature h3{
-
-        font-size:15px;
-    }
-
-    .feature p{
-
-        font-size:11px;
-    }
-
-
-    .about h2{
-
-        font-size:38px;
-    }
-
-    .about p{
-
-        font-size:14px;
-    }
-
-
-    .order-box{
-
-        padding:35px 20px;
-    }
-
-    .order-box h2{
-
-        font-size:31px;
-    }
-
-
-    .contact h2{
-
-        font-size:35px;
-    }
-
-    .contact .btn{
-
-        width:100%;
-    }
-
-
-    .whatsapp{
-
-        right:15px;
-
-        bottom:15px;
-
-        width:55px;
-
-        height:55px;
-    }
+  header{
+    height:auto;
+    min-height:70px;
+    padding:13px 5%;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .logo{
+    font-size:25px;
+  }
+
+  nav{
+    gap:12px;
+    order:3;
+    width:100%;
+    justify-content:center;
+  }
+
+  nav a{
+    font-size:10px;
+  }
+
+  .cart-btn{
+    margin-left:auto;
+  }
+
+  .hero{
+    padding:60px 6% 30px;
+  }
+
+  .hero h1{
+    font-size:49px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .hero-product img{
+    max-height:380px;
+  }
+
+  .hero-stamp{
+    width:88px;
+    height:88px;
+    font-size:8px;
+  }
+
+  section{
+    padding:65px 5%;
+  }
+
+  .section-heading h2{
+    font-size:37px;
+  }
+
+  .product-image{
+    min-height:390px;
+    padding:20px;
+  }
+
+  .product-info{
+    padding:35px 25px;
+  }
+
+  .product-info h3{
+    font-size:31px;
+  }
+
+  .features{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .feature{
+    padding:25px 10px;
+  }
+
+  .feature h3{
+    font-size:15px;
+  }
+
+  .feature p{
+    font-size:11px;
+  }
+
+  .checkout-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .checkout{
+    padding:22px;
+  }
+
+  .checkout-actions{
+    grid-template-columns:1fr;
+  }
+
+  .action-row{
+    grid-template-columns:1fr;
+  }
+
+  .cart-drawer{
+    padding:20px;
+  }
 
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* SMALL MOBILE */
 
 @media(max-width:400px){
 
-    .hero h1{
+  .hero h1{
+    font-size:42px;
+  }
 
-        font-size:42px;
-    }
+  nav{
+    gap:10px;
+  }
 
-    nav{
+  nav a{
+    font-size:9px;
+  }
 
-        gap:12px;
-    }
+  .features{
+    grid-template-columns:1fr;
+  }
 
-    nav a{
+  .feature{
+    border-right:0 !important;
+    border-bottom:1px solid var(--line);
+  }
 
-        font-size:10px;
-    }
+  .feature:last-child{
+    border-bottom:0;
+  }
 
-    .features{
-
-        grid-template-columns:1fr;
-    }
-
-    .feature{
-
-        border-right:0 !important;
-
-        border-bottom:1px solid #ded8ca;
-    }
-
-    .feature:last-child{
-
-        border-bottom:0;
-    }
-
-    .product-info h3{
-
-        font-size:28px;
-    }
+  .product-info h3{
+    font-size:28px;
+  }
 
 }
-
-</style>
-
+   </style>
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-    <div class="logo">
-        TAJEERA
-    </div>
+  <a class="logo" href="#home">
+    TAJEERA
+  </a>
 
-    <nav>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#shop">SHOP</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
 
-        <a href="#home">HOME</a>
-
-        <a href="#shop">SHOP</a>
-
-        <a href="#about">ABOUT</a>
-
-        <a href="#contact">CONTACT</a>
-
-    </nav>
+  <button class="cart-btn" onclick="openCart()">
+    CART
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
 
 </header>
 
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+  <div class="hero-content">
 
-        <div class="eyebrow">
-            Premium Assam Blend
-        </div>
+    <div class="eyebrow">
+      Premium Assam Blend
+    </div>
 
-        <h1>
-            A Stronger
-            <span>Kind</span>
-            of Tea.
-        </h1>
+    <h1>
+      A Stronger
+      <span>Kind</span>
+      of Tea.
+    </h1>
 
-        <p class="hero-description">
+    <p class="hero-description">
+      Discover Tajeera — a carefully crafted Assam tea blend
+      made for rich colour, bold taste and a refreshing
+      everyday cup.
+    </p>
 
-            Discover Tajeera — a carefully crafted Assam tea
-            blend made for rich colour, bold taste and a
-            refreshing everyday cup.
+    <div class="hero-buttons">
 
-        </p>
+      <a href="#shop" class="btn btn-primary">
+        SHOP TAJEERA
+      </a>
 
-        <div class="hero-buttons">
-
-            <a
-                href="#shop"
-                class="btn btn-primary">
-
-                SHOP Tajeera
-
-            </a>
-
-            <a
-                href="#about"
-                class="btn btn-outline">
-
-                OUR STORY
-
-            </a>
-
-        </div>
+      <a href="#about" class="btn btn-outline">
+        OUR STORY
+      </a>
 
     </div>
 
+  </div>
 
-    <div class="hero-product">
 
-        <img
-            src="tajeera-tea-250g.jpg.png"
-            alt="Tajeera Premium Assam Tea 250g">
+  <div class="hero-product">
 
-        <div class="hero-stamp">
+    <img
+      src="tajeera-tea-250g.jpg.png"
+      alt="Tajeera Premium Assam Tea 250g"
+    >
 
-            PREMIUM<br>
-            ASSAM<br>
-            BLEND
-
-        </div>
-
+    <div class="hero-stamp">
+      PREMIUM<br>
+      ASSAM<br>
+      BLEND
     </div>
+
+  </div>
 
 </section>
 
 
-
-<!-- =========================
-     TRUST STRIP
-========================= -->
+<!-- ================= TRUST STRIP ================= -->
 
 <div class="intro-strip">
 
-    <div class="intro-item">
+  <div class="intro-item">
+    <span>✦</span>
+    Rich Colour
+  </div>
 
-        <span>✦</span>
-        Rich Colour
+  <div class="intro-item">
+    <span>✦</span>
+    Strong Taste
+  </div>
 
-    </div>
+  <div class="intro-item">
+    <span>✦</span>
+    Refreshing Aroma
+  </div>
 
-    <div class="intro-item">
+  <div class="intro-item">
+    <span>✦</span>
+    COD Available
+  </div>
 
-        <span>✦</span>
-        Strong Taste
-
-    </div>
-
-    <div class="intro-item">
-
-        <span>✦</span>
-        Refreshing Aroma
-
-    </div>
-
-    <div class="intro-item">
-
-        <span>✦</span>
-        COD Available
-
-    </div>
+  <div class="intro-item">
+    <span>✦</span>
+    Secure Checkout
+  </div>
 
 </div>
 
 
+<!-- ================= SHOP ================= -->
 
-<!-- =========================
-     SHOP
-========================= -->
+<section id="shop">
 
-<section
-    class="shop-section"
-    id="shop">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-            The Tajeera Collection
-        </span>
-
-        <h2>
-            Our Signature Tea
-        </h2>
-
-        <p>
-            One carefully crafted blend.
-            One satisfying cup.
-        </p>
-
-    </div>
-
-
-    <div class="product-card">
-
-
-        <div class="product-image">
-
-            <img
-                src="tajeera-tea-250g.jpg.png"
-                alt="Tajeera Premium Assam Tea 250g">
-
-        </div>
-
-
-        <div class="product-info">
-
-            <div class="product-number">
-                TAJEERA / 001
-            </div>
-
-            <h3>
-                Tajeera Premium Assam Tea
-            </h3>
-
-            <div class="product-divider"></div>
-
-            <p class="product-description">
-
-                A rich and strong Assam blend crafted for
-                beautiful colour, bold taste and a refreshing
-                aroma. Made for tea lovers who enjoy a proper
-                strong cup every day.
-
-            </p>
-
-
-            <div class="price-row">
-
-                <span class="old-price">
-                    MRP ₹250
-                </span>
-
-                <span class="price">
-                    ₹190
-                </span>
-
-                <span class="price-note">
-                    / 250g
-                </span>
-
-            </div>
-
-
-            <div class="quantity-box">
-
-                <label for="quantity">
-                    Quantity
-                </label>
-
-                <select
-                    id="quantity"
-                    onchange="updateTotal()">
-
-                    <option value="1">
-                        1 Pack
-                    </option>
-
-                    <option value="2">
-                        2 Packs
-                    </option>
-
-                    <option value="3">
-                        3 Packs
-                    </option>
-
-                    <option value="4">
-                        4 Packs
-                    </option>
-
-                    <option value="5">
-                        5 Packs
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="total-price">
-
-                Total:
-                ₹<span id="totalPrice">190</span>
-
-            </div>
-
-
-            <div class="delivery">
-
-                🚚 FREE DELIVERY
-                &nbsp; • &nbsp;
-                💵 CASH ON DELIVERY
-
-            </div>
-
-
-            <a
-                href="#order"
-                class="order-btn">
-
-                ORDER NOW
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FEATURES
-========================= -->
-
-<section class="features-section">
-
-    <div class="features">
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                🍃
-            </div>
-
-            <h3>
-                Premium Blend
-            </h3>
-
-            <p>
-                Carefully selected tea blend.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                ☕
-            </div>
-
-            <h3>
-                Strong Taste
-            </h3>
-
-            <p>
-                Made for a satisfying cup.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                🚚
-            </div>
-
-            <h3>
-                Free Delivery
-            </h3>
-
-            <p>
-                Delivery charges are on us.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                💵
-            </div>
-
-            <h3>
-                COD Available
-            </h3>
-
-            <p>
-                Pay when your order arrives.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section
-    class="about-section"
-    id="about">
-
-    <div class="about">
-
-        <span class="section-label">
-            The Tajeera Story
-        </span>
-
-        <h2>
-            Good Tea Doesn't
-            Need To Be Complicated.
-        </h2>
-
-        <p>
-
-            Tajeera is built around one simple idea —
-            great tea should deliver rich colour, strong taste
-            and a satisfying aroma in every cup.
-
-            Our blend is created for people who appreciate
-            the character of a strong, comforting Indian tea.
-
-        </p>
-
-        <div class="about-signature">
-            — Tajeera Tea
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ORDER
-========================= -->
-
-<section
-    class="order-section"
-    id="order">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-            Order Direct
-        </span>
-
-        <h2>
-            Bring Tajeera Home
-        </h2>
-
-        <p>
-            Fill in your details and your order
-            will open directly on WhatsApp.
-        </p>
-
-    </div>
-
-
-    <div class="order-box">
-
-        <h2>
-            Place Your Order
-        </h2>
-
-        <p class="subtitle">
-            Tajeera Premium Assam Tea —
-            250g | ₹190
-        </p>
-
-
-        <form
-            onsubmit="sendOrder(); return false;">
-
-
-            <label class="form-label">
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your full name"
-                required>
-
-
-            <label class="form-label">
-                Mobile Number
-            </label>
-
-            <input
-                type="tel"
-                id="phone"
-                placeholder="Enter mobile number"
-                required>
-
-
-            <label class="form-label">
-                Delivery Address
-            </label>
-
-            <textarea
-                id="address"
-                placeholder="House no., street, locality"
-                required></textarea>
-
-
-            <label class="form-label">
-                City / Town
-            </label>
-
-            <input
-                type="text"
-                id="city"
-                placeholder="Enter city or town"
-                required>
-
-
-            <label class="form-label">
-                PIN Code
-            </label>
-
-            <input
-                type="text"
-                id="pincode"
-                placeholder="Enter PIN code"
-                required>
-
-
-            <button
-                type="submit"
-                class="submit-btn">
-
-                PLACE ORDER — ₹190 | COD
-
-            </button>
-
-            <div class="cod-note">
-                Your order details will be sent securely to Tajeera on WhatsApp.
-            </div>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    class="contact"
-    id="contact">
+  <div class="section-heading">
 
     <span class="section-label">
-        Get In Touch
+      The Tajeera Collection
     </span>
 
     <h2>
-        Let's Talk Tea.
+      Our Signature Tea
+    </h2>
+
+    <p>
+      One carefully crafted blend.
+      One satisfying cup.
+    </p>
+
+  </div>
+
+
+  <div class="product-card">
+
+    <!-- PRODUCT IMAGE -->
+
+    <div class="product-image">
+
+      <img
+        src="tajeera-tea-250g.jpg.png"
+        alt="Tajeera Premium Assam Tea 250g"
+      >
+
+    </div>
+
+
+    <!-- PRODUCT DETAILS -->
+
+    <div class="product-info">
+
+      <div class="product-number">
+        TAJEERA / 001
+      </div>
+
+      <h3>
+        Tajeera Premium Assam Tea
+      </h3>
+
+      <div class="product-divider"></div>
+
+      <p class="product-description">
+
+        A rich and strong Assam blend crafted for
+        beautiful colour, bold taste and a refreshing
+        aroma. Made for tea lovers who enjoy a proper
+        strong cup every day.
+
+      </p>
+
+
+      <!-- PRICE -->
+
+      <div class="price-row">
+
+        <span class="old-price">
+          MRP ₹250
+        </span>
+
+        <span class="price">
+          ₹190
+        </span>
+
+        <span class="price-note">
+          / 250g
+        </span>
+
+      </div>
+
+
+      <!-- QUANTITY -->
+
+      <div class="qty-row">
+
+        <strong style="
+          font:700 12px Arial;
+          color:var(--green);
+        ">
+          QUANTITY
+        </strong>
+
+        <div class="qty-control">
+
+          <button onclick="changeQty(-1)">
+            −
+          </button>
+
+          <input
+            id="productQty"
+            value="1"
+            readonly
+          >
+
+          <button onclick="changeQty(1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- DELIVERY -->
+
+      <div class="delivery">
+
+        🚚 FREE DELIVERY
+        &nbsp; • &nbsp;
+        💵 COD AVAILABLE
+
+      </div>
+
+
+      <!-- ACTION BUTTONS -->
+
+      <div class="action-row">
+
+        <button
+          class="action-btn"
+          onclick="addToCart()"
+        >
+          ADD TO CART
+        </button>
+
+        <button
+          class="action-btn alt"
+          onclick="buyNow()"
+        >
+          BUY NOW
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section">
+
+  <div class="features">
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🍃
+      </div>
+
+      <h3>
+        Premium Blend
+      </h3>
+
+      <p>
+        Carefully selected tea blend.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        ☕
+      </div>
+
+      <h3>
+        Strong Taste
+      </h3>
+
+      <p>
+        Made for a satisfying cup.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🚚
+      </div>
+
+      <h3>
+        Free Delivery
+      </h3>
+
+      <p>
+        Delivery charges are on us.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        💳
+      </div>
+
+      <h3>
+        Secure Checkout
+      </h3>
+
+      <p>
+        Choose prepaid or COD.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+  class="about-section"
+  id="about"
+>
+
+  <div class="about">
+
+    <span class="section-label">
+      The Tajeera Story
+    </span>
+
+    <h2>
+      Good Tea Doesn't Need
+      To Be Complicated.
     </h2>
 
     <p>
 
-        Have a question or want to know more about
-        Tajeera Premium Assam Tea?
+      Tajeera is built around one simple idea —
+      great tea should deliver rich colour,
+      strong taste and a satisfying aroma
+      in every cup.
+
+      Our blend is created for people who
+      appreciate the character of a strong,
+      comforting Indian tea.
 
     </p>
 
-    <a
-        class="btn btn-primary"
+    <div class="about-signature">
+      — Tajeera Tea
+    </div>
 
-        href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20know%20more."
-
-        target="_blank">
-
-        WHATSAPP US
-
-    </a>
+  </div>
 
 </section>
 
 
+<!-- ================= CONTACT ================= -->
 
-<!-- =========================
-     FOOTER
-========================= -->
+<section id="contact">
+
+  <div class="section-heading">
+
+    <span class="section-label">
+      Get In Touch
+    </span>
+
+    <h2>
+      Let's Talk Tea.
+    </h2>
+
+    <p>
+      Have a question or want to know more
+      about Tajeera Premium Assam Tea?
+    </p>
+
+    <br>
+
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20know%20more."
+      target="_blank"
+    >
+      WHATSAPP US
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <div class="footer-brand">
-        TAJEERA
-    </div>
+  <div class="footer-brand">
+    TAJEERA
+  </div>
 
-    © 2026 Tajeera Tea.
-    All Rights Reserved.
+  © 2026 Tajeera Tea.
+  All Rights Reserved.
 
 </footer>
 
 
-
-<!-- =========================
-     WHATSAPP
-========================= -->
+<!-- ================= WHATSAPP ================= -->
 
 <a
-
-    class="whatsapp"
-
-    href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20place%20an%20order."
-
-    target="_blank"
-
-    aria-label="WhatsApp">
-
-    ☎
-
+  class="whatsapp"
+  href="https://wa.me/917454086419?text=Hello%20Tajeera%20Tea,%20I%20want%20to%20place%20an%20order."
+  target="_blank"
+  aria-label="WhatsApp"
+>
+  ☎
 </a>
 
 
+<!-- =================================================
+     CART DRAWER
+================================================= -->
 
-<!-- =========================
+<div
+  class="drawer-backdrop"
+  id="drawer"
+  onclick="
+    if(event.target===this){
+      closeCart();
+    }
+  "
+>
+
+  <aside class="cart-drawer">
+
+    <div class="drawer-head">
+
+      <h2>
+        Your Cart
+      </h2>
+
+      <button
+        class="close"
+        onclick="closeCart()"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+
+    <div
+      id="cartBottom"
+      style="display:none"
+    >
+
+      <div class="cart-total">
+
+        <span>
+          Total
+        </span>
+
+        <span id="cartTotal">
+          ₹0
+        </span>
+
+      </div>
+
+
+      <button
+        class="full-btn"
+        onclick="openCheckout()"
+      >
+        PROCEED TO CHECKOUT
+      </button>
+
+    </div>
+
+  </aside>
+
+</div>
+
+
+<!-- =================================================
+     CHECKOUT MODAL
+================================================= -->
+
+<div
+  class="checkout-modal"
+  id="checkoutModal"
+>
+
+  <div class="checkout">
+
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+    ">
+
+      <div>
+
+        <h2>
+          Checkout
+        </h2>
+
+        <p class="checkout-sub">
+          Complete your delivery details
+          and choose payment.
+        </p>
+
+      </div>
+
+      <button
+        class="close"
+        onclick="closeCheckout()"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <form
+      id="checkoutForm"
+      onsubmit="submitCheckout(event)"
+    >
+
+      <div class="checkout-grid">
+
+
+        <!-- NAME -->
+
+        <div class="field">
+
+          <label>
+            Full Name
+          </label>
+
+          <input
+            id="cName"
+            type="text"
+            required
+            placeholder="Your name"
+          >
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="field">
+
+          <label>
+            Mobile Number
+          </label>
+
+          <input
+            id="cPhone"
+            type="tel"
+            required
+            pattern="[6-9][0-9]{9}"
+            maxlength="10"
+            placeholder="10-digit mobile"
+          >
+
+        </div>
+
+
+        <!-- ADDRESS -->
+
+        <div class="field full">
+
+          <label>
+            Delivery Address
+          </label>
+
+          <textarea
+            id="cAddress"
+            required
+            placeholder="House no., street, locality"
+          ></textarea>
+
+        </div>
+
+
+        <!-- CITY -->
+
+        <div class="field">
+
+          <label>
+            City / Town
+          </label>
+
+          <input
+            id="cCity"
+            type="text"
+            required
+            placeholder="City"
+          >
+
+        </div>
+
+
+        <!-- PIN -->
+
+        <div class="field">
+
+          <label>
+            PIN Code
+          </label>
+
+          <input
+            id="cPin"
+            type="text"
+            required
+            pattern="[0-9]{6}"
+            maxlength="6"
+            placeholder="6-digit PIN"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- PAYMENT METHODS -->
+
+      <div class="payment-box">
+
+        <h3>
+          PAYMENT METHOD
+        </h3>
+
+
+        <label class="pay-option">
+
+          <input
+            type="radio"
+            name="payment"
+            value="COD"
+            checked
+          >
+
+          Cash on Delivery (COD)
+
+        </label>
+
+
+        <label class="pay-option">
+
+          <input
+            type="radio"
+            name="payment"
+            value="PREPAID"
+          >
+
+          Prepaid —
+          UPI / Card / Net Banking
+
+        </label>
+
+      </div>
+
+
+      <!-- CHECKOUT BUTTONS -->
+
+      <div class="checkout-actions">
+
+        <button
+          type="button"
+          class="cancel"
+          onclick="closeCheckout()"
+        >
+          BACK TO CART
+        </button>
+
+        <button
+          type="submit"
+          class="pay-now"
+          id="checkoutSubmit"
+        >
+          PLACE COD ORDER
+        </button>
+
+      </div>
+
+
+      <div class="secure-note">
+
+        Your details are used only to process
+        the order.
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+  class="toast"
+  id="toast"
+></div>
+
+
+<!-- =================================================
      JAVASCRIPT
-========================= -->
+================================================= -->
 
 <script>
 
+const PRODUCT = {
 
-function updateTotal(){
+  name:
+    "Tajeera Premium Assam Tea",
 
-    var quantity =
-        parseInt(
-            document.getElementById("quantity").value
-        );
+  weight:
+    "250g",
 
-    var price = 190;
+  price:
+    190,
 
-    var total =
-        price * quantity;
+  image:
+    "tajeera-tea-250g.jpg.png"
 
-    document.getElementById("totalPrice")
-        .textContent = total;
+};
+
+
+let cart =
+  JSON.parse(
+    localStorage.getItem("tajeeraCart") || "[]"
+  );
+
+
+/* SAVE CART */
+
+function saveCart(){
+
+  localStorage.setItem(
+    "tajeeraCart",
+    JSON.stringify(cart)
+  );
+
+  renderCart();
 
 }
 
 
-function sendOrder(){
+/* PRODUCT QUANTITY */
 
-    var name =
-        document.getElementById("name").value;
+function productQty(){
 
-    var phone =
-        document.getElementById("phone").value;
+  return Math.max(
+    1,
+    Math.min(
+      10,
+      parseInt(
+        document.getElementById(
+          "productQty"
+        ).value
+      ) || 1
+    )
+  );
 
-    var address =
-        document.getElementById("address").value;
-
-    var city =
-        document.getElementById("city").value;
-
-    var pincode =
-        document.getElementById("pincode").value;
-
-
-    var quantity = 1;
-
-    var quantityBox =
-        document.getElementById("quantity");
+}
 
 
-    if(quantityBox){
+/* CHANGE PRODUCT QUANTITY */
 
-        quantity =
-            parseInt(quantityBox.value) || 1;
+function changeQty(number){
+
+  const input =
+    document.getElementById(
+      "productQty"
+    );
+
+  let quantity =
+    productQty() + number;
+
+  quantity =
+    Math.max(
+      1,
+      Math.min(
+        10,
+        quantity
+      )
+    );
+
+  input.value =
+    quantity;
+
+}
+
+
+/* ADD TO CART */
+
+function addToCart(
+  quantity = productQty()
+){
+
+  const existing =
+    cart.find(
+      item =>
+        item.name === PRODUCT.name
+    );
+
+
+  if(existing){
+
+    existing.qty += quantity;
+
+    existing.qty =
+      Math.min(
+        10,
+        existing.qty
+      );
+
+  }else{
+
+    cart.push({
+
+      ...PRODUCT,
+
+      qty: quantity
+
+    });
+
+  }
+
+
+  saveCart();
+
+  showToast(
+    "Tajeera added to cart"
+  );
+
+  openCart();
+
+}
+
+
+/* BUY NOW */
+
+function buyNow(){
+
+  cart = [
+
+    {
+      ...PRODUCT,
+
+      qty: productQty()
 
     }
 
-
-    var price = 190;
-
-    var total =
-        price * quantity;
+  ];
 
 
-    var message =
+  saveCart();
 
-        "Hello Tajeera Tea,%0A%0A" +
+  openCheckout();
 
-        "I want to place an order.%0A%0A" +
-
-        "Product: Tajeera Premium Assam Tea%0A" +
-
-        "Weight: 250g per pack%0A" +
-
-        "Quantity: " +
-        quantity +
-        " Pack(s)%0A" +
-
-        "Price: ₹190 per pack%0A" +
-
-        "Total Amount: ₹" +
-        total +
-        "%0A" +
-
-        "Payment: Cash on Delivery%0A%0A" +
-
-        "Customer Name: " +
-        encodeURIComponent(name) +
-        "%0A" +
-
-        "Mobile: " +
-        encodeURIComponent(phone) +
-        "%0A" +
-
-        "Address: " +
-        encodeURIComponent(address) +
-        "%0A" +
-
-        "City: " +
-        encodeURIComponent(city) +
-        "%0A" +
-
-        "PIN Code: " +
-        encodeURIComponent(pincode);
+}
 
 
-    window.open(
+/* REMOVE CART ITEM */
 
-        "https://wa.me/917454086419?text=" +
-        message,
+function removeItem(index){
 
-        "_blank"
+  cart.splice(
+    index,
+    1
+  );
 
+  saveCart();
+
+}
+
+
+/* CHANGE CART QUANTITY */
+
+function changeCartQty(
+  index,
+  number
+){
+
+  cart[index].qty =
+    Math.max(
+      1,
+      Math.min(
+        10,
+        cart[index].qty + number
+      )
+    );
+
+  saveCart();
+
+}
+
+
+/* RENDER CART */
+
+function renderCart(){
+
+  const cartCount =
+    document.getElementById(
+      "cartCount"
+    );
+
+
+  const totalItems =
+    cart.reduce(
+      (sum,item) =>
+        sum + item.qty,
+      0
+    );
+
+
+  cartCount.textContent =
+    totalItems;
+
+
+  const cartItems =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  const cartBottom =
+    document.getElementById(
+      "cartBottom"
+    );
+
+
+  if(cart.length === 0){
+
+    cartItems.innerHTML = `
+
+      <div class="empty">
+
+        Your cart is empty.
+
+        <br><br>
+
+        Add Tajeera to continue.
+
+      </div>
+
+    `;
+
+    cartBottom.style.display =
+      "none";
+
+    return;
+
+  }
+
+
+  cartItems.innerHTML =
+    cart.map(
+      (item,index) => `
+
+      <div class="cart-item">
+
+        <img
+          src="${item.image}"
+          alt="${item.name}"
+        >
+
+        <div>
+
+          <h4>
+            ${item.name}
+          </h4>
+
+          <small>
+            ${item.weight}
+            • ₹${item.price} each
+          </small>
+
+          <div style="
+            margin-top:8px;
+          ">
+
+            <button
+              class="remove"
+              onclick="
+                changeCartQty(
+                  ${index},
+                  -1
+                )
+              "
+            >
+              −
+            </button>
+
+            <span style="
+              font:700 12px Arial;
+              margin:0 10px;
+            ">
+              ${item.qty}
+            </span>
+
+            <button
+              class="remove"
+              onclick="
+                changeCartQty(
+                  ${index},
+                  1
+                )
+              "
+            >
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="remove"
+          onclick="
+            removeItem(
+              ${index}
+            )
+          "
+        >
+          REMOVE
+        </button>
+
+      </div>
+
+    `
+    )
+    .join("");
+
+
+  const total =
+    cart.reduce(
+      (sum,item) =>
+        sum +
+        item.price *
+        item.qty,
+      0
+    );
+
+
+  document.getElementById(
+    "cartTotal"
+  ).textContent =
+    "₹" + total;
+
+
+  cartBottom.style.display =
+    "block";
+
+}
+
+
+/* OPEN CART */
+
+function openCart(){
+
+  renderCart();
+
+  document
+    .getElementById(
+      "drawer"
+    )
+    .classList.add(
+      "open"
     );
 
 }
 
+
+/* CLOSE CART */
+
+function closeCart(){
+
+  document
+    .getElementById(
+      "drawer"
+    )
+    .classList.remove(
+      "open"
+    );
+
+}
+
+
+/* OPEN CHECKOUT */
+
+function openCheckout(){
+
+  if(
+    cart.length === 0
+  ){
+
+    showToast(
+      "Your cart is empty"
+    );
+
+    return;
+
+  }
+
+
+  closeCart();
+
+
+  document
+    .getElementById(
+      "checkoutModal"
+    )
+    .classList.add(
+      "open"
+    );
+
+}
+
+
+/* CLOSE CHECKOUT */
+
+function closeCheckout(){
+
+  document
+    .getElementById(
+      "checkoutModal"
+    )
+    .classList.remove(
+      "open"
+    );
+
+}
+
+
+/* PAYMENT BUTTON TEXT */
+
+document
+  .querySelectorAll(
+    'input[name="payment"]'
+  )
+  .forEach(
+    radio => {
+
+      radio.addEventListener(
+        "change",
+        function(){
+
+          const button =
+            document.getElementById(
+              "checkoutSubmit"
+            );
+
+
+          if(
+            this.value ===
+            "PREPAID"
+          ){
+
+            button.textContent =
+              "CONTINUE TO PAYMENT";
+
+          }else{
+
+            button.textContent =
+              "PLACE COD ORDER";
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+/* SUBMIT CHECKOUT */
+
+function submitCheckout(event){
+
+  event.preventDefault();
+
+
+  const payment =
+    document.querySelector(
+      'input[name="payment"]:checked'
+    ).value;
+
+
+  const orderId =
+    "TAJ" +
+    Date.now()
+      .toString()
+      .slice(-8);
+
+
+  const total =
+    cart.reduce(
+      (sum,item) =>
+        sum +
+        item.price *
+        item.qty,
+      0
+    );
+
+
+  const order = {
+
+    orderId:
+
+      orderId,
+
+    payment:
+
+      payment,
+
+    customer: {
+
+      name:
+        document.getElementById(
+          "cName"
+        ).value.trim(),
+
+      phone:
+        document.getElementById(
+          "cPhone"
+        ).value.trim(),
+
+      address:
+        document.getElementById(
+          "cAddress"
+        ).value.trim(),
+
+      city:
+        document.getElementById(
+          "cCity"
+        ).value.trim(),
+
+      pin:
+        document.getElementById(
+          "cPin"
+        ).value.trim()
+
+    },
+
+    items:
+
+      cart,
+
+    total:
+
+      total,
+
+    createdAt:
+
+      new Date()
+        .toISOString()
+
+  };
+
+
+  localStorage.setItem(
+    "tajeeraLastOrder",
+    JSON.stringify(order)
+  );
+
+
+  /* ================================
+     PREPAID PAYMENT
+     
+     IMPORTANT:
+     Real payment gateway will be
+     connected here later.
+  ================================= */
+
+  if(
+    payment ===
+    "PREPAID"
+  ){
+
+    showToast(
+      "Prepaid gateway connection required"
+    );
+
+    return;
+
+  }
+
+
+  /* ================================
+     COD ORDER
+  ================================= */
+
+
+  const quantity =
+    cart.reduce(
+      (sum,item) =>
+        sum + item.qty,
+      0
+    );
+
+
+  const message =
+
+    "Hello Tajeera Tea,\n\n" +
+
+    "ORDER ID: " +
+    orderId +
+    "\n\n" +
+
+    "Product: " +
+    PRODUCT.name +
+    "\n" +
+
+    "Weight: " +
+    PRODUCT.weight +
+    " per pack\n" +
+
+    "Quantity: " +
+    quantity +
+    " Pack(s)\n" +
+
+    "Total Amount: ₹" +
+    total +
+    "\n" +
+
+    "Payment: Cash on Delivery\n\n" +
+
+    "Customer Name: " +
+    order.customer.name +
+    "\n" +
+
+    "Mobile: " +
+    order.customer.phone +
+    "\n" +
+
+    "Address: " +
+    order.customer.address +
+    "\n" +
+
+    "City: " +
+    order.customer.city +
+    "\n" +
+
+    "PIN Code: " +
+    order.customer.pin;
+
+
+  window.open(
+
+    "https://wa.me/917454086419?text=" +
+
+    encodeURIComponent(
+      message
+    ),
+
+    "_blank"
+
+  );
+
+
+  cart = [];
+
+  saveCart();
+
+  closeCheckout();
+
+
+  showToast(
+    "COD order details opened in WhatsApp"
+  );
+
+}
+
+
+/* TOAST MESSAGE */
+
+function showToast(message){
+
+  const toast =
+    document.getElementById(
+      "toast"
+    );
+
+
+  toast.textContent =
+    message;
+
+
+  toast.classList.add(
+    "show"
+  );
+
+
+  setTimeout(
+    () => {
+
+      toast.classList.remove(
+        "show"
+      );
+
+    },
+    3500
+  );
+
+}
+
+
+/* INITIAL CART LOAD */
+
+renderCart();
+
 </script>
 
-
 </body>
-
 </html>
