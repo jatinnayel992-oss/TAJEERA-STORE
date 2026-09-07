@@ -2857,18 +2857,25 @@ if(
 
     razorpay.on(
       "payment.failed",
-      function(){
+      function(response){
+    console.error("RAZORPAY PAYMENT FAILED:", response);
 
-        submitButton.disabled =
-          false;
+    submitButton.disabled = false;
 
-        submitButton.textContent =
-          "CONTINUE TO PAYMENT";
+    submitButton.textContent =
+      "CONTINUE TO PAYMENT";
 
-        showToast(
-          "Payment failed. Please try again."
-        );
+    const error = response.error || {};
 
+    const message =
+      "Payment Failed\n\n" +
+      "Code: " + (error.code || "N/A") + "\n" +
+      "Reason: " + (error.reason || "N/A") + "\n" +
+      "Step: " + (error.step || "N/A") + "\n" +
+      "Source: " + (error.source || "N/A") + "\n\n" +
+      (error.description || "Unknown Razorpay error");
+
+    alert(message);
       }
     );
 
