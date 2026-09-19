@@ -347,11 +347,17 @@ section{
 
 /* SHOP */
 
-.product-card{
-  max-width:1080px;
+.product-collection{
+  max-width:1250px;
   margin:auto;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.product-card{
+  display:flex;
+  flex-direction:column;
   background:white;
   box-shadow:0 25px 70px rgba(24,46,34,.12);
   border:1px solid rgba(185,130,82,.15);
@@ -359,7 +365,7 @@ section{
 }
 
 .product-image{
-  min-height:560px;
+  min-height:390px;
   background:
     radial-gradient(
       circle at center,
@@ -376,14 +382,14 @@ section{
 
 .product-image img{
   width:100%;
-  max-width:440px;
-  max-height:530px;
+  max-width:300px;
+  max-height:390px;
   object-fit:contain;
   filter:drop-shadow(0 25px 22px rgba(0,0,0,.20));
 }
 
 .product-info{
-  padding:55px 48px;
+  padding:34px 30px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -398,7 +404,7 @@ section{
 
 .product-info h3{
   color:var(--green);
-  font-size:38px;
+  font-size:29px;
   line-height:1.15;
   font-weight:normal;
   margin-bottom:18px;
@@ -936,8 +942,13 @@ footer{
     min-height:420px;
   }
 
-  .product-card{
+  .product-collection{
     grid-template-columns:1fr;
+  }
+
+  .product-card{
+    display:grid;
+    grid-template-columns:1fr 1fr;
   }
 
   .features{
@@ -1027,6 +1038,11 @@ footer{
 
   .product-info h3{
     font-size:31px;
+  }
+
+  .product-card{
+    display:flex;
+    flex-direction:column;
   }
 
   .features{
@@ -1267,132 +1283,104 @@ footer{
 
     <p>
       One carefully crafted blend.
-      One satisfying cup.
+      Choose the pack that suits you.
     </p>
 
   </div>
 
+  <div class="product-collection">
 
-  <div class="product-card">
-
-    <!-- PRODUCT IMAGE -->
-
-    <div class="product-image">
-
-      <img
-        src="tajeera-tea-250g.jpg.png"
-        alt="Tajeera Premium Assam Tea 250g"
-      >
-
+    <!-- 250G -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="tajeera-tea-250g.jpg.png" alt="Tajeera Premium Assam Tea 250g">
+      </div>
+      <div class="product-info">
+        <div class="product-number">TAJEERA / 250G</div>
+        <h3>Tajeera Premium Assam Tea</h3>
+        <div class="product-divider"></div>
+        <p class="product-description">Rich colour, bold taste and refreshing aroma in our signature Assam blend.</p>
+        <div class="price-row">
+          <span class="old-price">MRP ₹250</span>
+          <span class="price">₹190</span>
+          <span class="price-note">/ 250g</span>
+        </div>
+        <div class="qty-row">
+          <strong style="font:700 12px Arial;color:var(--green);">QUANTITY</strong>
+          <div class="qty-control">
+            <button onclick="changeProductQty('250g',-1)">−</button>
+            <input id="productQty-250g" value="1" readonly>
+            <button onclick="changeProductQty('250g',1)">+</button>
+          </div>
+        </div>
+        <div class="delivery">🚚 FREE DELIVERY &nbsp; • &nbsp; 💵 COD AVAILABLE</div>
+        <div class="action-row">
+          <button class="action-btn" onclick="addProductToCart('250g')">ADD TO CART</button>
+          <button class="action-btn alt" onclick="buyProductNow('250g')">BUY NOW</button>
+        </div>
+      </div>
     </div>
 
-
-    <!-- PRODUCT DETAILS -->
-
-    <div class="product-info">
-
-      <div class="product-number">
-        TAJEERA / 001
+    <!-- 500G -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="tajeera-tea-250g.jpg.png" alt="Tajeera Premium Assam Tea 500g">
       </div>
-
-      <h3>
-        Tajeera Premium Assam Tea
-      </h3>
-
-      <div class="product-divider"></div>
-
-      <p class="product-description">
-
-        A rich and strong Assam blend crafted for
-        beautiful colour, bold taste and a refreshing
-        aroma. Made for tea lovers who enjoy a proper
-        strong cup every day.
-
-      </p>
-
-
-      <!-- PRICE -->
-
-      <div class="price-row">
-
-        <span class="old-price">
-          MRP ₹250
-        </span>
-
-        <span class="price">
-          ₹190
-        </span>
-
-        <span class="price-note">
-          / 250g
-        </span>
-
-      </div>
-
-
-      <!-- QUANTITY -->
-
-      <div class="qty-row">
-
-        <strong style="
-          font:700 12px Arial;
-          color:var(--green);
-        ">
-          QUANTITY
-        </strong>
-
-        <div class="qty-control">
-
-          <button onclick="changeQty(-1)">
-            −
-          </button>
-
-          <input
-            id="productQty"
-            value="1"
-            readonly
-          >
-
-          <button onclick="changeQty(1)">
-            +
-          </button>
-
+      <div class="product-info">
+        <div class="product-number">TAJEERA / 500G</div>
+        <h3>Tajeera Premium Assam Tea</h3>
+        <div class="product-divider"></div>
+        <p class="product-description">The same Tajeera blend in a bigger pack for regular tea drinkers and families.</p>
+        <div class="price-row">
+          <span class="old-price">MRP ₹440</span>
+          <span class="price">₹360</span>
+          <span class="price-note">/ 500g</span>
         </div>
-
+        <div class="qty-row">
+          <strong style="font:700 12px Arial;color:var(--green);">QUANTITY</strong>
+          <div class="qty-control">
+            <button onclick="changeProductQty('500g',-1)">−</button>
+            <input id="productQty-500g" value="1" readonly>
+            <button onclick="changeProductQty('500g',1)">+</button>
+          </div>
+        </div>
+        <div class="delivery">🚚 FREE DELIVERY &nbsp; • &nbsp; 💵 COD AVAILABLE</div>
+        <div class="action-row">
+          <button class="action-btn" onclick="addProductToCart('500g')">ADD TO CART</button>
+          <button class="action-btn alt" onclick="buyProductNow('500g')">BUY NOW</button>
+        </div>
       </div>
+    </div>
 
-
-      <!-- DELIVERY -->
-
-      <div class="delivery">
-
-        🚚 FREE DELIVERY
-        &nbsp; • &nbsp;
-        💵 COD AVAILABLE
-
+    <!-- 1KG -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="tajeera-tea-250g.jpg.png" alt="Tajeera Premium Assam Tea 1kg">
       </div>
-
-
-      <!-- ACTION BUTTONS -->
-
-      <div class="action-row">
-
-        <button
-          class="action-btn"
-          onclick="addToCart()"
-        >
-          ADD TO CART
-        </button>
-
-        <button
-          class="action-btn alt"
-          onclick="buyNow()"
-        >
-          BUY NOW
-        </button>
-
+      <div class="product-info">
+        <div class="product-number">TAJEERA / 1KG</div>
+        <h3>Tajeera Premium Assam Tea</h3>
+        <div class="product-divider"></div>
+        <p class="product-description">Our value pack for homes, offices and anyone who likes keeping Tajeera stocked.</p>
+        <div class="price-row">
+          <span class="old-price">MRP ₹780</span>
+          <span class="price">₹680</span>
+          <span class="price-note">/ 1kg</span>
+        </div>
+        <div class="qty-row">
+          <strong style="font:700 12px Arial;color:var(--green);">QUANTITY</strong>
+          <div class="qty-control">
+            <button onclick="changeProductQty('1kg',-1)">−</button>
+            <input id="productQty-1kg" value="1" readonly>
+            <button onclick="changeProductQty('1kg',1)">+</button>
+          </div>
+        </div>
+        <div class="delivery">🚚 FREE DELIVERY &nbsp; • &nbsp; 💵 COD AVAILABLE</div>
+        <div class="action-row">
+          <button class="action-btn" onclick="addProductToCart('1kg')">ADD TO CART</button>
+          <button class="action-btn alt" onclick="buyProductNow('1kg')">BUY NOW</button>
+        </div>
       </div>
-
     </div>
 
   </div>
@@ -1878,25 +1866,81 @@ footer{
 
 <script>
 /* =========================================
-   TAJEERA PRODUCT
+   TAJEERA PRODUCTS
 ========================================= */
 
-const PRODUCT = {
+const PRODUCTS = {
 
-  name:
-    "Tajeera Premium Assam Tea",
+  "250g": {
+    id: "250g",
+    name: "Tajeera Premium Assam Tea",
+    weight: "250g",
+    price: 190,
+    mrp: 250,
+    image: "tajeera-tea-250g.jpg.png"
+  },
 
-  weight:
-    "250g",
+  "500g": {
+    id: "500g",
+    name: "Tajeera Premium Assam Tea",
+    weight: "500g",
+    price: 360,
+    mrp: 440,
+    image: "tajeera-tea-250g.jpg.png"
+  },
 
-  price:
-    190,
-
-  image:
-    "tajeera-tea-250g.jpg.png"
-
+  "1kg": {
+    id: "1kg",
+    name: "Tajeera Premium Assam Tea",
+    weight: "1kg",
+    price: 680,
+    mrp: 780,
+    image: "tajeera-tea-250g.jpg.png"
+  }
 };
 
+function getProduct(productId){
+  return PRODUCTS[productId];
+}
+
+function productQty(productId){
+  const input = document.getElementById("productQty-" + productId);
+  return Math.max(1, Math.min(10, parseInt(input?.value, 10) || 1));
+}
+
+function changeProductQty(productId, number){
+  const input = document.getElementById("productQty-" + productId);
+  if(!input) return;
+  input.value = Math.max(1, Math.min(10, productQty(productId) + number));
+}
+
+function addProductToCart(productId){
+  const product = getProduct(productId);
+  const quantity = productQty(productId);
+  if(!product) return;
+
+  const existing = cart.find(item => item.id === productId);
+
+  if(existing){
+    existing.qty = Math.min(10, existing.qty + quantity);
+  }else{
+    cart.push({...product, qty: quantity});
+  }
+
+  saveCart();
+  showToast(product.weight + " Tajeera added to cart");
+  openCart();
+}
+
+function buyProductNow(productId){
+  const product = getProduct(productId);
+  const quantity = productQty(productId);
+  if(!product) return;
+
+  cart = [{...product, qty: quantity}];
+  saveCart();
+  openCheckout();
+}
 
 /* =========================================
    CART DATA
@@ -1905,6 +1949,20 @@ let cart =
   JSON.parse(
     localStorage.getItem("tajeeraCart") || "[]"
   );
+
+// Keep any existing 250g cart data compatible with the new 3-pack system.
+cart = cart.map(item => {
+  const matched =
+    PRODUCTS[item.id] ||
+    Object.values(PRODUCTS).find(product => product.weight === item.weight);
+
+  if(!matched) return null;
+
+  return {
+    ...matched,
+    qty: Math.max(1, Math.min(10, Number(item.qty) || 1))
+  };
+}).filter(Boolean);
 
 
 /* SAVE CART */
@@ -1917,122 +1975,6 @@ function saveCart(){
   );
 
   renderCart();
-
-}
-
-
-/* PRODUCT QUANTITY */
-
-function productQty(){
-
-  return Math.max(
-    1,
-    Math.min(
-      10,
-      parseInt(
-        document.getElementById(
-          "productQty"
-        ).value
-      ) || 1
-    )
-  );
-
-}
-
-
-/* CHANGE PRODUCT QUANTITY */
-
-function changeQty(number){
-
-  const input =
-    document.getElementById(
-      "productQty"
-    );
-
-  let quantity =
-    productQty() + number;
-
-  quantity =
-    Math.max(
-      1,
-      Math.min(
-        10,
-        quantity
-      )
-    );
-
-  input.value =
-    quantity;
-
-}
-
-
-/* ADD TO CART */
-
-function addToCart(
-  quantity = productQty()
-){
-
-  const existing =
-    cart.find(
-      item =>
-        item.name === PRODUCT.name
-    );
-
-
-  if(existing){
-
-    existing.qty += quantity;
-
-    existing.qty =
-      Math.min(
-        10,
-        existing.qty
-      );
-
-  }else{
-
-    cart.push({
-
-      ...PRODUCT,
-
-      qty: quantity
-
-    });
-
-  }
-
-
-  saveCart();
-
-  showToast(
-    "Tajeera added to cart"
-  );
-
-  openCart();
-
-}
-
-
-/* BUY NOW */
-
-function buyNow(){
-
-  cart = [
-
-    {
-      ...PRODUCT,
-
-      qty: productQty()
-
-    }
-
-  ];
-
-
-  saveCart();
-
-  openCheckout();
 
 }
 
@@ -2351,6 +2293,13 @@ document
   );
 
 
+function cartSummary(items){
+  return items.map(item =>
+    `${item.weight} × ${item.qty} pack(s) @ ₹${item.price} = ₹${item.price * item.qty}`
+  ).join(" | ") + "\n\n";
+}
+
+
 /* SUBMIT CHECKOUT */
 
 async function submitCheckout(event){
@@ -2469,15 +2418,13 @@ if(
   try{
 
     /* ================================
-       TOTAL QUANTITY
+       CART ITEMS FOR SERVER
     ================================= */
 
-    const quantity =
-      cart.reduce(
-        (sum,item) =>
-          sum + item.qty,
-        0
-      );
+    const items = cart.map(item => ({
+      productId: item.id,
+      quantity: item.qty
+    }));
 
 
     /* ================================
@@ -2500,8 +2447,7 @@ if(
 
           body:
             JSON.stringify({
-              quantity:
-                quantity
+              items: items
             })
 
         }
@@ -2552,7 +2498,7 @@ if(
 
 
       image:
-        PRODUCT.image,
+        order.items[0]?.image || "tajeera-tea-250g.jpg.png",
 
 
       order_id:
@@ -2751,17 +2697,8 @@ if(
               verification.payment_id +
               "\n\n" +
 
-              "Product: " +
-              PRODUCT.name +
-              "\n" +
-
-              "Weight: " +
-              PRODUCT.weight +
-              " per pack\n" +
-
-              "Quantity: " +
-              quantity +
-              " Pack(s)\n" +
+              "Products: " +
+              cartSummary(order.items) +
 
               "Total Amount: ₹" +
               total +
@@ -2919,14 +2856,6 @@ if(
   ================================= */
 
 
-  const quantity =
-    cart.reduce(
-      (sum,item) =>
-        sum + item.qty,
-      0
-    );
-
-
   const message =
 
     "Hello Tajeera Tea,\n\n" +
@@ -2935,17 +2864,11 @@ if(
     orderId +
     "\n\n" +
 
-    "Product: " +
-    PRODUCT.name +
-    "\n" +
+    "Products: " +
+    cartSummary(order.items) +
 
-    "Weight: " +
-    PRODUCT.weight +
-    " per pack\n" +
-
-    "Quantity: " +
-    quantity +
-    " Pack(s)\n" +
+    "Total Amount: ₹" +
+    total +
 
     "Total Amount: ₹" +
     total +
