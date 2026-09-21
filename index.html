@@ -158,7 +158,7 @@ async function submitCheckout(event){
   }
   button.disabled=true; button.textContent='CREATING PAYMENT...';
   try{
-    const payload={items:order.items.map(i=>({productId:i.weight,quantity:i.qty}))};
+    const payload={product:order.items.length===1 ? order.items[0].weight : '',quantity:order.items.length===1 ? order.items[0].qty : 0};
     const r=await fetch(RAZORPAY_BACKEND+'/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     const data=await r.json();
     if(!r.ok||!data.success) throw new Error(data.error||'Unable to create payment');
@@ -186,7 +186,7 @@ async function submitCheckout(event){
         })});
         const verified=await vr.json();
         if(!vr.ok||!verified.success) throw new Error(verified.error||'Payment verification failed');
-        order.razorpayOrderId=verified.order_id;order.razorpayPaymentId=verified.payment_id;order.paymentStatus=verified.status;
+        order.razorpayOrderId=verified.razorpay_order_id;order.razorpayPaymentId=verified.payment_id;order.paymentStatus=verified.status;
         localStorage.setItem('tajeeraLastOrder',JSON.stringify(order));
         items.length=0;render();closeCheckout();showSuccess(order,'Razorpay — Payment Successful',verified.payment_id);
         button.disabled=false;button.textContent='CONTINUE TO PAYMENT';
