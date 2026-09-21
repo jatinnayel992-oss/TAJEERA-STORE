@@ -21,6 +21,16 @@ footer{background:#050604;border-top:1px solid var(--line);padding:35px 24px 15p
 @media(max-width:850px){.links{display:none}.heroIn,.storyGrid,.brew{grid-template-columns:1fr}.hero{min-height:auto}.heroVisual{height:390px}.hero h1{font-size:52px}.products,.reviews{grid-template-columns:1fr 1fr}.features{grid-template-columns:repeat(2,1fr)}.whyGrid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(3,1fr)}.trust{grid-template-columns:repeat(2,1fr)}.foot{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.top{font-size:9px}.top span:nth-child(3){display:none}.navin{padding:0 12px}.brand{min-width:145px}.brand img{width:34px;height:34px}.brandtext{font-size:18px}.icons{margin-left:auto}.heroIn{padding:35px 16px}.hero h1{font-size:45px}.heroVisual{height:330px}.pack{height:310px}.cupText{font-size:23px;right:4px}.products,.reviews{grid-template-columns:1fr}.section{padding:30px 16px}.steps{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr}.whyGrid{grid-template-columns:1fr 1fr}}
 </style>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+const RAZORPAY_KEY_ID = "rzp_live_TZFjTzw7AXpl1O";
+const RAZORPAY_BACKEND = "https://tajeera-payment.jatinnayel992.workers.dev";
+</script>
+
+<style>
+.checkoutOverlay,.successOverlay{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}.checkoutOverlay.open,.successOverlay.open{display:flex}.checkoutBox,.successBox{width:min(680px,100%);max-height:92vh;overflow:auto;background:#0a0b07;border:1px solid var(--gold2);border-radius:12px;padding:22px;box-shadow:0 25px 80px #000}.checkoutHead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);margin-bottom:18px}.checkoutHead h2,.successBox h2{font:700 28px Georgia,serif;color:var(--gold2);margin:0 0 14px}.checkoutGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.checkoutGrid .full{grid-column:1/-1}.checkoutGrid label{display:block;color:#d9cfba;font-size:11px;font-weight:700;margin-bottom:5px}.checkoutGrid input,.checkoutGrid textarea{width:100%;border:1px solid #4c3c18;background:#10110c;color:#fff;padding:11px;border-radius:6px;outline:none}.checkoutGrid textarea{min-height:72px;resize:vertical}.payOptions{display:grid;gap:8px;margin:16px 0;padding:13px;border:1px solid #342a15;border-radius:8px;color:#eee2c8;font-size:12px}.payOptions label{display:flex;gap:8px;align-items:center}.checkoutSummary{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;color:#ddd2bb;font-size:12px;line-height:1.7}.checkoutSummary .sumTotal{font-size:18px;color:var(--gold2);font-weight:800}.checkoutSubmit{width:100%;margin-top:15px;padding:13px;border:1px solid var(--gold2);background:var(--gold2);color:#111;font-weight:800;border-radius:5px}.checkoutSubmit:disabled{opacity:.6;cursor:not-allowed}.secureNote{text-align:center;color:#99917f;font-size:10px}.successBox{text-align:center;max-width:480px}.successIcon{width:70px;height:70px;border-radius:50%;margin:0 auto 15px;background:#d7a943;color:#111;font-size:46px;display:grid;place-items:center;font-weight:900}.successBox p{color:#d4c9b5;font-size:13px}.successDetails{margin:15px 0;text-align:left;border:1px solid #3c3018;border-radius:8px;padding:14px;color:#ddd2bb;font-size:12px;line-height:1.8}.successDetails b{color:#fff}.successDetails .amount{color:var(--gold2);font-size:18px}
+@media(max-width:560px){.checkoutGrid{grid-template-columns:1fr}.checkoutGrid .full{grid-column:auto}}
+</style>
 </head>
 <body>
 <div class="top">
@@ -62,7 +72,7 @@ footer{background:#050604;border-top:1px solid var(--line);padding:35px 24px 15p
 <footer id="contact"><div class="foot"><div><div class="footBrand">TAJEERA</div><p>PURE LEAF • PURE TASTE</p><p>Premium Assam blend crafted for a rich, strong everyday cup.</p></div><div><h4>Quick Links</h4><a href="#">Home</a><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#brew">Tea Guide</a><a href="#reviews">Reviews</a></div><div><h4>Help & Support</h4><a href="https://wa.me/917454086419">Contact Us</a><a href="#">Shipping Policy</a><a href="#">Return & Refund</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div><div><h4>Stay Connected</h4><a href="https://wa.me/917454086419">WhatsApp: +91 7454086419</a><a href="mailto:support@tajeera.in">support@tajeera.in</a><p>Get updates on new products and offers.</p></div></div><div class="copy">© 2026 Tajeera. All rights reserved. &nbsp;|&nbsp; Pure Leaf • Pure Taste</div></footer>
 
 <a class="wa" href="https://wa.me/917454086419?text=Hello%20Tajeera%2C%20I%20want%20to%20order%20tea." aria-label="WhatsApp">☎</a>
-<aside class="cartPanel" id="cart"><div class="cartHead"><h3>Your Cart</h3><button class="close" onclick="document.getElementById('cart').classList.remove('open')">×</button></div><div class="cartItems" id="cartItems"><p style="color:#999">Your cart is empty.</p></div><div class="cartTotal"><span>Total</span><span id="total">₹0</span></div><button class="waOrder" onclick="orderCart()">Order on WhatsApp</button></aside>
+<aside class="cartPanel" id="cart"><div class="cartHead"><h3>Your Cart</h3><button class="close" onclick="document.getElementById('cart').classList.remove('open')">×</button></div><div class="cartItems" id="cartItems"><p style="color:#999">Your cart is empty.</p></div><div class="cartTotal"><span>Total</span><span id="total">₹0</span></div><button class="waOrder" onclick="openCheckout()">Proceed to Checkout</button></aside>
 
 <script>
 const items=[];
@@ -70,7 +80,145 @@ function add(weight,price){const x=items.find(i=>i.weight===weight);if(x){if(x.q
 function changeQty(index,delta){const item=items[index];if(!item)return;item.qty=Math.max(1,Math.min(40,item.qty+delta));render()}
 function render(){document.getElementById('badge').textContent=items.reduce((a,b)=>a+b.qty,0);let total=0;const box=document.getElementById('cartItems');if(!items.length){box.innerHTML='<p style="color:#999">Your cart is empty.</p>'}else{box.innerHTML=items.map((i,idx)=>{total+=i.price*i.qty;return `<div class="cartRow"><div><b>Tajeera ${i.weight}</b><div class="qtyCtl"><button onclick="changeQty(${idx},-1)">−</button><span>${i.qty}</span><button onclick="changeQty(${idx},1)">+</button></div></div><b>₹${i.price*i.qty}</b></div>`}).join('')}document.getElementById('total').textContent='₹'+total}
 function buy(weight,price){add(weight,price);location.hash='shop'}
-function orderCart(){if(!items.length)return;let msg='Hello Tajeera, I want to order:%0A';let total=0;items.forEach(i=>{msg+=`Tajeera ${i.weight} x ${i.qty} = ₹${i.price*i.qty}%0A`;total+=i.price*i.qty});msg+=`Total = ₹${total}`;location.href='https://wa.me/917454086419?text='+msg}
+
+function openCheckout(){
+  if(!items.length){alert('Your cart is empty.');return}
+  document.getElementById('cart').classList.remove('open');
+  renderCheckoutSummary();
+  document.getElementById('checkoutOverlay').classList.add('open');
+}
+function closeCheckout(){document.getElementById('checkoutOverlay').classList.remove('open')}
+function renderCheckoutSummary(){
+  let total=0;
+  const rows=items.map(i=>{const v=i.price*i.qty;total+=v;return `<div>${i.weight} × ${i.qty} &nbsp; — &nbsp; ₹${v}</div>`}).join('');
+  document.getElementById('checkoutSummary').innerHTML=rows+`<div class="sumTotal">Total: ₹${total}</div>`;
+}
+function showSuccess(order,paymentLabel,paymentId){
+  document.getElementById('successTitle').textContent='Order Successful!';
+  document.getElementById('successText').textContent='Thank you for shopping with Tajeera. Your order has been received successfully.';
+  const details = order.items.map(i=>`${i.weight} × ${i.qty}`).join(', ');
+  document.getElementById('successDetails').innerHTML=
+    `<div><b>Order ID:</b> ${order.orderId}</div>
+     <div><b>Products:</b> ${details}</div>
+     <div><b>Payment:</b> ${paymentLabel}</div>
+     ${paymentId?`<div><b>Payment ID:</b> ${paymentId}</div>`:''}
+     <div class="amount"><b>Amount:</b> ₹${order.total}</div>`;
+  document.getElementById('successOverlay').classList.add('open');
+}
+function closeSuccess(){document.getElementById('successOverlay').classList.remove('open');location.hash='shop'}
+async function submitCheckout(event){
+  event.preventDefault();
+  if(!items.length){alert('Your cart is empty.');return}
+  const button=document.getElementById('checkoutSubmit');
+  const payment=document.querySelector('input[name="payment"]:checked').value;
+  const total=items.reduce((sum,i)=>sum+i.price*i.qty,0);
+  const order={
+    orderId:'TAJ'+Date.now().toString().slice(-10),
+    payment,
+    customer:{
+      name:document.getElementById('cName').value.trim(),
+      phone:document.getElementById('cPhone').value.trim(),
+      address:document.getElementById('cAddress').value.trim(),
+      city:document.getElementById('cCity').value.trim(),
+      pin:document.getElementById('cPin').value.trim()
+    },
+    items:items.map(i=>({weight:i.weight,price:i.price,qty:i.qty})),
+    total
+  };
+  if(payment==='COD'){
+    button.disabled=true; button.textContent='PLACING COD ORDER...';
+    localStorage.setItem('tajeeraLastOrder',JSON.stringify(order));
+    items.length=0; render(); closeCheckout();
+    showSuccess(order,'Cash on Delivery','');
+    button.disabled=false; button.textContent='CONTINUE TO PAYMENT';
+    return;
+  }
+  button.disabled=true; button.textContent='CREATING PAYMENT...';
+  try{
+    const payload={items:order.items.map(i=>({productId:i.weight,quantity:i.qty}))};
+    const r=await fetch(RAZORPAY_BACKEND+'/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await r.json();
+    if(!r.ok||!data.success) throw new Error(data.error||'Unable to create payment');
+    const options={
+      key:RAZORPAY_KEY_ID,amount:data.amount,currency:data.currency,name:'Tajeera',
+      description:'Tajeera Premium Assam Tea',image:'tajeera-pack-cutout.png',order_id:data.order_id,
+      prefill:{name:order.customer.name,contact:order.customer.phone},
+      notes:{customer_name:order.customer.name,city:order.customer.city,pin:order.customer.pin},
+      theme:{color:'#d7a943'},
+      modal:{ondismiss:()=>{button.disabled=false;button.textContent='CONTINUE TO PAYMENT'}},
+      handler:async function(response){
+        button.textContent='VERIFYING PAYMENT...';
+        const vr=await fetch(RAZORPAY_BACKEND+'/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+          razorpay_payment_id:response.razorpay_payment_id,
+          razorpay_order_id:response.razorpay_order_id,
+          razorpay_signature:response.razorpay_signature
+        })});
+        const verified=await vr.json();
+        if(!vr.ok||!verified.success) throw new Error(verified.error||'Payment verification failed');
+        order.razorpayOrderId=verified.order_id;order.razorpayPaymentId=verified.payment_id;order.paymentStatus=verified.status;
+        localStorage.setItem('tajeeraLastOrder',JSON.stringify(order));
+        items.length=0;render();closeCheckout();showSuccess(order,'Razorpay — Payment Successful',verified.payment_id);
+        button.disabled=false;button.textContent='CONTINUE TO PAYMENT';
+      }
+    };
+    const rz=new Razorpay(options);
+    rz.on('payment.failed',function(){button.disabled=false;button.textContent='CONTINUE TO PAYMENT';alert('Payment failed. Your cart is safe; please try again.')});
+    rz.open();
+  }catch(e){
+    button.disabled=false;button.textContent='CONTINUE TO PAYMENT';alert(e.message||'Unable to start payment');
+  }
+}
+
 </script>
+
+<div class="checkoutOverlay" id="checkoutOverlay">
+  <div class="checkoutBox">
+    <div class="checkoutHead">
+      <h2>Checkout</h2>
+      <button class="close" onclick="closeCheckout()">×</button>
+    </div>
+    <form id="checkoutForm" onsubmit="submitCheckout(event)">
+      <div class="checkoutGrid">
+        <div>
+          <label>Full Name</label>
+          <input id="cName" required placeholder="Your full name">
+        </div>
+        <div>
+          <label>Mobile Number</label>
+          <input id="cPhone" required inputmode="numeric" pattern="[6-9][0-9]{9}" placeholder="10-digit mobile">
+        </div>
+        <div class="full">
+          <label>Full Address</label>
+          <textarea id="cAddress" required placeholder="House no., street, area"></textarea>
+        </div>
+        <div>
+          <label>City</label>
+          <input id="cCity" required placeholder="City">
+        </div>
+        <div>
+          <label>PIN Code</label>
+          <input id="cPin" required inputmode="numeric" pattern="[0-9]{6}" placeholder="6-digit PIN">
+        </div>
+      </div>
+      <div class="payOptions">
+        <label><input type="radio" name="payment" value="PREPAID" checked> Prepaid — UPI / Card / Net Banking</label>
+        <label><input type="radio" name="payment" value="COD"> Cash on Delivery</label>
+      </div>
+      <div class="checkoutSummary" id="checkoutSummary"></div>
+      <button class="checkoutSubmit" id="checkoutSubmit" type="submit">CONTINUE TO PAYMENT</button>
+      <p class="secureNote">🔒 Secure checkout • Your payment is verified before the order is confirmed.</p>
+    </form>
+  </div>
+</div>
+
+<div class="successOverlay" id="successOverlay">
+  <div class="successBox">
+    <div class="successIcon">✓</div>
+    <h2 id="successTitle">Order Successful!</h2>
+    <p id="successText">Thank you for shopping with Tajeera.</p>
+    <div id="successDetails"></div>
+    <button class="checkoutSubmit" onclick="closeSuccess()">Continue Shopping</button>
+  </div>
+</div>
 </body>
 </html>
