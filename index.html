@@ -127,10 +127,33 @@ async function submitCheckout(event){
   };
   if(payment==='COD'){
     button.disabled=true; button.textContent='PLACING COD ORDER...';
-    localStorage.setItem('tajeeraLastOrder',JSON.stringify(order));
-    items.length=0; render(); closeCheckout();
-    showSuccess(order,'Cash on Delivery','');
-    button.disabled=false; button.textContent='CONTINUE TO PAYMENT';
+    try{
+      const payload={
+        customer_name:order.customer.name,
+        customer_phone:order.customer.phone,
+        customer_address:order.customer.address,
+        customer_city:order.customer.city,
+        customer_pin:order.customer.pin,
+        items:order.items,
+        total_amount:order.total
+      };
+      const r=await fetch(RAZORPAY_BACKEND+'/save-cod-order',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      const data=await r.json();
+      if(!r.ok||!data.success) throw new Error(data.error||'Unable to save COD order');
+      order.orderId=data.order_id;
+      order.orderStatus=data.status||'New';
+      localStorage.setItem('tajeeraLastOrder',JSON.stringify(order));
+      items.length=0; render(); closeCheckout();
+      showSuccess(order,'Cash on Delivery','');
+    }catch(e){
+      alert(e.message||'Unable to place COD order');
+    }finally{
+      button.disabled=false; button.textContent='CONTINUE TO PAYMENT';
+    }
     return;
   }
   button.disabled=true; button.textContent='CREATING PAYMENT...';
@@ -151,7 +174,15 @@ async function submitCheckout(event){
         const vr=await fetch(RAZORPAY_BACKEND+'/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
           razorpay_payment_id:response.razorpay_payment_id,
           razorpay_order_id:response.razorpay_order_id,
-          razorpay_signature:response.razorpay_signature
+          razorpay_signature:response.razorpay_signature,
+          customer_name:order.customer.name,
+          customer_phone:order.customer.phone,
+          customer_address:order.customer.address,
+          customer_city:order.customer.city,
+          customer_pin:order.customer.pin,
+          product:order.items.length===1 ? order.items[0].weight : '',
+          quantity:order.items.length===1 ? order.items[0].qty : 0,
+          items:order.items
         })});
         const verified=await vr.json();
         if(!vr.ok||!verified.success) throw new Error(verified.error||'Payment verification failed');
